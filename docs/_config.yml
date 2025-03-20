@@ -18,8 +18,8 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Adam Roberts
-email: #arober48[at]ur[dot]rochester[dot]edu
+title: "Adam Roberts"
+email: "arober48[at]ur[dot]rochester[dot]edu"
 description: >- # this means to ignore newlines until "baseurl:"
   Political science PhD student at the University of Rochester
 baseurl: "" # the subpath of your site, e.g. /blog
