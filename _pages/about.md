@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Motto. Etc.
+subtitle: <a href='https://www.sas.rochester.edu/psc/people/phd-current.php'>Political Science PhD Candidate, University of Rochester</a>
 
 profile:
   align: right
