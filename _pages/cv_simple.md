@@ -1,13 +1,10 @@
 ---
-layout: cv
+layout: page
 permalink: /cv/
 title: cv
 nav: true
 nav_order: 4
-cv_pdf: CV_AdamRoberts.pdf # you can also use external links here
-description: This is a description of the page. You can modify it in '_pages/cv.md'. You can also change or remove the top pdf download button.
-toc:
-  sidebar: left
+description: 
 ---
 
-You can access my CV here.
+You can access my CV [Intro to Comparative Politics](https://www.sas.rochester.edu//psc/syllabi/20242025/101_PSCIsyllmeguid_FALL2024.pdf).
