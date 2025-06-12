@@ -1,7 +1,7 @@
 ---
 layout: page
 permalink: /research/
-title: research
+title: Research
 description: 
 nav: true
 nav_order: 2
@@ -15,7 +15,7 @@ nav_order: 2
 1. *“Who’s Afraid of the PRD? Learning about New Parties in Hegemonic Party Systems”*
 
 ### Works in Progress
-1. *“Outcome Bias and Gender”* with Dot Sawler
+1. *“Outcome Bias and Female Candidates”* with Dot Sawler
 2. *“Reference Points and Democratic Backsliding: An Experimental Analysis”* with Gretchen Helmke
 3. *“Bureaucratic Capacity in the EU”*
 

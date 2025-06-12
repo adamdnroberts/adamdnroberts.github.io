@@ -1,6 +1,6 @@
 ---
 layout: about
-title: about
+title: About
 permalink: /
 subtitle: <a href='https://www.sas.rochester.edu/psc/people/phd-current.php'>Political Science PhD Candidate, University of Rochester</a>
 
