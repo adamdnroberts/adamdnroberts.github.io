@@ -28,3 +28,8 @@ latest_posts:
 ---
 
 I am a PhD candidate in Political Science at the University of Rochester. My research focuses on the comparative politics of developing countries, with a particular emphasis on Latin America. I am also interested in quantitative research methods. I earned my BA in Political Science/Economics from Brigham Young University (BYU) in 2021.
+
+I have an incredibly common name! To clarify, I am not Emeritus Professor [Sir Adam Roberts](https://en.wikipedia.org/wiki/Adam_Roberts_(scholar)), the science fiction novelist [Adam Charles Roberts](https://en.wikipedia.org/wiki/Adam_Roberts_(British_writer)), or any of [these Adam Robertses](https://en.wikipedia.org/wiki/Adam_Roberts).
+
+
+---
