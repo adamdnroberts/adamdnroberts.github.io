@@ -33,15 +33,14 @@ layout: default
           %}
         {% endif %}
 
-		<!-- Social -->
-    {% if page.social %}
-      <div class="social">
-        <div style="font-size: 40px;" class="contact-icons">{% include social.liquid %}</div>
+        <!-- Social -->
+        {% if page.social %}
+          <div class="social">
+            <div style="font-size: 40px;" class="contact-icons">{% include social.liquid %}</div>
 
-        <div class="contact-note">{{ site.contact_note }}</div>
-      </div>
-    {% endif %}
-		
+            <div class="contact-note">{{ site.contact_note }}</div>
+          </div>
+        {% endif %}
         {% if page.profile.more_info %}
           <div class="more-info">{{ page.profile.more_info }}</div>
         {% endif %}
