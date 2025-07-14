@@ -23,8 +23,6 @@ nav_order: 2
 
 2. _“[Geographic Representation and Bureaucratic Capacity in the European Commission ](https://adamdnroberts.github.io/assets/pdf/CV_AdamRoberts.pdf)"_
 
-
-
    <details>
      <summary><strong>Abstract</strong></summary>
      <p>
@@ -32,8 +30,6 @@ nav_order: 2
 ### Works in Progress
 
 1. _“Outcome Bias and Female Candidates”_ with Dot Sawler
-
-
 
 2. _“Transparency or Political Theater? An Analysis of AMLO's Interactions with Journalists”_ with Kirill Kazantcez
 
