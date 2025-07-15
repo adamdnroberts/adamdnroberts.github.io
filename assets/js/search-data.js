@@ -28,7 +28,7 @@ ninja.data = [{
           description: "",
           section: "Navigation",
           handler: () => {
-            window.location.href = "/cv/";
+            window.location.href = "/assets/pdf/CV_AdamRoberts.pdf";
           },
         },{id: "books-the-godfather",
           title: 'The Godfather',
