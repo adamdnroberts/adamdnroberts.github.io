@@ -1,6 +1,6 @@
 ---
 layout: page
-permalink: /cv/
+permalink: /assets/pdf/CV_AdamRoberts.pdf
 title: CV
 nav: true
 nav_order: 4
