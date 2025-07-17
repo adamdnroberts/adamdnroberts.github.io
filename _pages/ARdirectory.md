@@ -7,7 +7,7 @@ nav: false
 nav_order: 3
 ---
 
-Welcome to the "Directory of Adam Robertses"! Below is a list of individuals named Adam Roberts, along with relevant details or sources.
+Welcome to the Directory of Adam Robertses! Adam Roberts is an incredibly common name in both the US and the UK, which means that you might be looking for a different Adam Roberts than me. Here is a directory of all the Adam Robertses I've found throughout my life. If there is another Adam Roberts that you think should be added to the directory, please let me know.
 
 | Name           | Profession               |
 |----------------|--------------------------|
@@ -21,8 +21,9 @@ Welcome to the "Directory of Adam Robertses"! Below is a list of individuals nam
 | Adam Roberts   | [Beach Volleyball Player](http://www.bvbinfo.com/player.asp?ID=182) |
 | Adam Roberts   | [Instructor at University of Alabama](https://english.ua.edu/people/adam-roberts/) |
 | Adam Roberts   | [NYC Real Estate Broker](https://www.wernewyork.com/Agent/75914/Adam-Roberts?agentId=75914&saleStatusType=10&sortOrder=Price&sortAsc=false) |
+---
 
-Nearly Adam Robertses
+Near-Adam Robertses
 | Name           | Profession               |
 |----------------|--------------------------|
 | Adam Robertson   | [Former Utah House Representative](https://en.wikipedia.org/wiki/Adam_Robertson_(American_politician)) |
