@@ -11,18 +11,16 @@ Welcome to the Directory of Adam Robertses! Adam Roberts is an incredibly common
 
 | Name           | Profession               |
 |----------------|--------------------------|
-| Adam Roberts   | [Emeritus Professor of International Relations](https://en.wikipedia.org/wiki/Adam_Roberts_(scholar)) | 
-| Adam Roberts   | [Science Fiction and Fantasy Novelist](https://en.wikipedia.org/wiki/Adam_Roberts_(British_writer)) |
-| Adam Roberts | [Food Writer and Novelist](https://www.amateurgourmet.com/) |
-| Adam Roberts   | [English Footballer](https://en.wikipedia.org/wiki/Adam_Roberts_(footballer)) |
-| Adam Roberts   | [Canadian Motorcyclist](https://en.wikipedia.org/wiki/Adam_Roberts_(motorcyclist)) |
-| Adam Roberts   | [Vice President at kasirer](https://kasirer.nyc/team/adam-roberts-vice-president-legislation/) |
-| Adam Roberts   | [Digital Editor at The Economist](https://mediadirectory.economist.com/people/adam-roberts/) |
-| Adam Roberts   | [Beach Volleyball Player](http://www.bvbinfo.com/player.asp?ID=182) |
-| Adam Roberts   | [Instructor at University of Alabama](https://english.ua.edu/people/adam-roberts/) |
-| Adam Roberts   | [NYC Real Estate Broker](https://www.wernewyork.com/Agent/75914/Adam-Roberts?agentId=75914&saleStatusType=10&sortOrder=Price&sortAsc=false) |
-| Adam Robertson   | [Former Utah House Representative](https://en.wikipedia.org/wiki/Adam_Robertson_(American_politician)) |
-| Adam Rogers      | [Jazz Guitarist](https://en.wikipedia.org/wiki/Adam_Rogers_(musician)) |
-
+| Adam Roberts   | <a rel="nofollow" href="https://en.wikipedia.org/wiki/Adam_Roberts_(scholar)">Emeritus Professor of International Relations</a> | 
+| Adam Roberts   | <a rel="nofollow" href="https://en.wikipedia.org/wiki/Adam_Roberts_(British_writer)">Science Fiction and Fantasy Novelist</a> |
+| Adam Roberts   | <a rel="nofollow" href="https://www.amateurgourmet.com/">Food Writer and Novelist</a> |
+| Adam Roberts   | <a rel="nofollow" href="https://en.wikipedia.org/wiki/Adam_Roberts_(footballer)">English Footballer</a> |
+| Adam Roberts   | <a rel="nofollow" href="https://en.wikipedia.org/wiki/Adam_Roberts_(motorcyclist)">Canadian Motorcyclist</a> |
+| Adam Roberts   | <a rel="nofollow" href="https://kasirer.nyc/team/adam-roberts-vice-president-legislation/">Vice President at kasirer</a> |
+| Adam Roberts   | <a rel="nofollow" href="https://mediadirectory.economist.com/people/adam-roberts/">Digital Editor at The Economist</a> |
+| Adam Roberts   | <a rel="nofollow" href="http://www.bvbinfo.com/player.asp?ID=182">Beach Volleyball Player</a> |
+| Adam Roberts   | <a rel="nofollow" href="https://english.ua.edu/people/adam-roberts/">Instructor at University of Alabama</a> |
+| Adam Roberts   | <a rel="nofollow" href="https://www.wernewyork.com/Agent/75914/Adam-Roberts?agentId=75914&amp;saleStatusType=10&amp;sortOrder=Price&amp;sortAsc=false">NYC Real Estate Broker</a> |
+| Adam Roberts   | <a rel="nofollow" href="https://www.kent.edu/music/profile/adam-roberts">Associate Professor at Kent State University</a> |
 
 ---
