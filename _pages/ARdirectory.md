@@ -21,11 +21,6 @@ Welcome to the Directory of Adam Robertses! Adam Roberts is an incredibly common
 | Adam Roberts   | [Beach Volleyball Player](http://www.bvbinfo.com/player.asp?ID=182) |
 | Adam Roberts   | [Instructor at University of Alabama](https://english.ua.edu/people/adam-roberts/) |
 | Adam Roberts   | [NYC Real Estate Broker](https://www.wernewyork.com/Agent/75914/Adam-Roberts?agentId=75914&saleStatusType=10&sortOrder=Price&sortAsc=false) |
----
-
-Near-Adam Robertses
-| Name           | Profession               |
-|----------------|--------------------------|
 | Adam Robertson   | [Former Utah House Representative](https://en.wikipedia.org/wiki/Adam_Robertson_(American_politician)) |
 | Adam Rogers      | [Jazz Guitarist](https://en.wikipedia.org/wiki/Adam_Rogers_(musician)) |
 
