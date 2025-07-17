@@ -1,6 +1,6 @@
 ---
 layout: page
-permalink: /teaching/
+permalink: /adam_roberts_directory/
 title: Teaching
 description:
 nav: false
