@@ -9,6 +9,9 @@ nav_order: 3
 
 #### University of Rochester
 
+- **Teaching Assistant**, [Data Analysis I (Undergrad)](https://www.sas.rochester.edu/psc/syllabi/20252026/200_PSCI_Signorino_2025.pdf)  
+  _Prof. Curt Signorino, Fall 2025_
+  
 - **Teaching Assistant**, [Intro to Comparative Politics](https://www.sas.rochester.edu//psc/syllabi/20242025/101_PSCIsyllmeguid_FALL2024.pdf)  
   _Prof. Bonnie Meguid, Fall 2024_
 

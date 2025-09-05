@@ -12,7 +12,7 @@ nav_order: 2
    *Sigma: Journal of Political and International Studies* 38, no. 1 (May)
 
 ### Working Papers
-1. *“Who’s Afraid of the PRD? Learning about New Parties in Hegemonic Party Systems"*
+1. *“[Who’s Afraid of the PRD? Learning about New Parties in Hegemonic Party Systems ](https://adamdnroberts.github.io/assets/pdf/CV_AdamRoberts.pdf)"*
    <details>
      <summary><strong>Abstract</strong></summary>
      <p>
@@ -23,7 +23,7 @@ nav_order: 2
 
 
 
-2. *“Geographic Representation and Bureaucratic Capacity in the European Commission"*
+2. *“[Geographic Representation and Bureaucratic Capacity in the European Commission ](https://adamdnroberts.github.io/assets/pdf/CV_AdamRoberts.pdf)"*
    <details>
      <summary><strong>Abstract</strong></summary>
      <p>

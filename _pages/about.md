@@ -27,7 +27,7 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-I am a PhD candidate in Political Science at the University of Rochester and a Democracy Center Grad Fellow for the 2025-2026 academic year. My research focuses on the comparative politics of developing countries, with a particular emphasis on Latin America. I am also interested in quantitative research methods. I earned my BA in Political Science/Economics from Brigham Young University (BYU) in 2021.
+I am a PhD candidate in Political Science at the University of Rochester and a Democracy Center Graduate Fellow for the 2025-2026 academic year. My research studies electoral accountability and political behavior in developing democracies, with a focus on Mexico. I am also interested in quantitative research methods. I earned my BA in Political Science/Economics from Brigham Young University (BYU) in 2021.
 
 I have an incredibly common name! To clarify, I am not Emeritus Professor [Sir Adam Roberts](<https://en.wikipedia.org/wiki/Adam_Roberts_(scholar)>), the science fiction novelist [Adam Charles Roberts](<https://en.wikipedia.org/wiki/Adam_Roberts_(British_writer)>), or any of [these Adam Robertses](https://adamdnroberts.github.io/adam_roberts_directory/).
 
