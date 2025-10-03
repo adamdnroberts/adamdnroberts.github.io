@@ -7,7 +7,7 @@ nav: false
 nav_order: 3
 ---
 
-Welcome to the Directory of Adam Robertses! Adam Roberts is an incredibly common name in both the US and the UK, which means that you might be looking for a different Adam Roberts than me. Here is a directory of all the Adam Robertses I've found throughout my life. If there is another Adam Roberts that you think should be added to the directory, please let me know.
+Adam Roberts is an incredibly common name in both the US and the UK, which means that you might be looking for a different Adam Roberts than me. Here is a directory of all the Adam Robertses I've found while trying to SEO. If there is another Adam Roberts that you think should be added to the directory, please let me know.
 
 | Name           | Profession               |
 |----------------|--------------------------|
