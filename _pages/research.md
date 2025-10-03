@@ -19,7 +19,7 @@ nav_order: 2
 
 
 
-2. “Geographic Representation and Bureaucratic Capacity in the European Commission" *Under Review.*
+2. [“Geographic Representation and Bureaucratic Capacity in the European Commission"](https://adamdnroberts.github.io/assets/pdf/EU_Capacity.pdf) *Under Review.*
    <details>
      <summary><strong>Abstract</strong></summary>
      <p>
@@ -27,11 +27,10 @@ nav_order: 2
      </p>
    </details>
 
+<!--
 ### Works in Progress
 
 1. “Electoral Losses and Candidate Electability in Local Elections” with Dot Sawler
 
 2. “Transparency or Political Theater? An Analysis of AMLO's Interactions with Journalists” with Kirill Kazantcez
-
-
----
+-->
