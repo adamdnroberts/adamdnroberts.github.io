@@ -19,7 +19,7 @@ nav_order: 2
 
 
 
-2. [“Geographic Representation and Bureaucratic Capacity in the European Commission"](https://adamdnroberts.github.io/assets/pdf/EU_Capacity.pdf) *Under Review.*
+2. [“Geographic Representation and Bureaucratic Capacity in the European Commission"](<https://adamdnroberts.github.io/assets/pdf/EU_Capacity.pdf>) *Under Review.*
    <details>
      <summary><strong>Abstract</strong></summary>
      <p>
