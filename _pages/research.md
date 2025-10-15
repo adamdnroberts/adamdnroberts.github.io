@@ -19,7 +19,7 @@ nav_order: 2
 
 
 
-2. “Geographic Representation and Bureaucratic Capacity in the European Commission” *Under Review.* <a href="https://doi.org/10.31235/osf.io/8vgu6_v1" target="_blank" rel="noopener noreferrer">[Paper]</a>
+2. “Geographic Representation and Bureaucratic Capacity in the European Commission” *Under Review.* <a href="https://doi.org/10.31235/osf.io/8vgu6" target="_blank" rel="noopener noreferrer">[Paper]</a>
    <details>
      <summary><strong>Abstract</strong></summary>
      <p>
