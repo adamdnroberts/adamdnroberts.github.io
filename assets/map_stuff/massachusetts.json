@@ -1,0 +1,1 @@
+{"units":{"bounds":[[-73.5081,41.238],[-69.9283,42.8866]],"idColumn":{"key":"GEOID","name":"County"},"tileset":{"sourceLayer":"counties","source":{"type":"vector","url":"mapbox://adamdnroberts.massachusetts"}}}}
