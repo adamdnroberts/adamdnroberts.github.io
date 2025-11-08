@@ -1,0 +1,19 @@
+{
+  "units": {
+    "bounds": [
+      [-79.7622, 40.4961],
+      [-71.8562, 45.0159]
+    ],
+    "idColumn": {
+      "key": "GEOID",
+      "name": "County"
+    },
+    "tileset": {
+      "sourceLayer": "counties",
+      "source": {
+        "type": "vector",
+        "url": "mapbox://adamdnroberts.newyork"
+      }
+    }
+  }
+}
