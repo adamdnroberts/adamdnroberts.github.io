@@ -2054,35 +2054,17 @@
                     }, {
                         key: "checkConnected",
                         value: function (e) {
-                            var t = this.graph;
-                            if (!t)
-                                return null;
-                            var n = this.state.plan.assignment,
-                            i = {},
-                            r = 0;
-                            for (var o in n)
-                                0 === n[o] && (i[o] = !1, r++);
-                            var s = function e(n, i) {
-                                var r = 1;
-                                n[i] = !0;
-                                var o,
-                                s = w(t[i]);
-                                try {
-                                    for (s.s(); !(o = s.n()).done; ) {
-                                        var a = o.value;
-                                        !1 === n[a] && (r += e(n, a))
-                                    }
-                                } catch (e) {
-                                    s.e(e)
-                                } finally {
-                                    s.f()
-                                }
-                                return r
+                            // Always allow proceeding
+                            this.allowProceed(true);
+
+                            // Hide any existing error element if present
+                            if (e) {
+                                e.hidden = true;
+                                e.innerHTML = null;
                             }
-                            (i, this.homeBlock.id) === r;
-                            return s ? (e.hidden = !0, e.innerHTML = null) : (e.hidden = !1, e.innerHTML = "Your neighborhood must be in one piece only."),
-                            this.allowProceed(s),
-                            s
+
+                            // Always return true (neighborhood passes the check)
+                            return true;
                         }
                     }, {
                         key: "loadAddress",

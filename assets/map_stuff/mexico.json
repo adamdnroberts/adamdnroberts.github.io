@@ -1,0 +1,19 @@
+{
+  "units": {
+    "bounds": [
+      [-102.8742, 21.6223],
+      [-101.8353, 22.4596]
+    ],
+    "idColumn": {
+      "key": "GEOID",
+      "name": "Estado"
+    },
+    "tileset": {
+      "sourceLayer": "estados",
+      "source": {
+        "type": "vector",
+        "url": "mapbox://adamdnroberts.mexico"
+      }
+    }
+  }
+}
