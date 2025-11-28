@@ -1,15 +1,15 @@
 {
   "units": {
     "bounds": [
-      [-102.8742, 21.6223],
-      [-101.8353, 22.4596]
+      [-118.3651, 14.5321],
+      [-86.7104, 32.7186]
     ],
     "idColumn": {
       "key": "GEOID",
-      "name": "Estado"
+      "name": "Municipios"
     },
     "tileset": {
-      "sourceLayer": "estados",
+      "sourceLayer": "municipios",
       "source": {
         "type": "vector",
         "url": "mapbox://adamdnroberts.mexico"

@@ -1275,7 +1275,7 @@
             e
         }
         function _e() {
-            var e = m(['<img src="', '" alt="Brush" \n            style="display: inline-block; height: 26px !important; z-index: 100;"></img>']);
+            var e = m(['<img src="', '" alt="Cursor" \n            style="display: inline-block; height: 26px !important; z-index: 100;"></img>']);
             return _e = function () {
                 return e
             },
