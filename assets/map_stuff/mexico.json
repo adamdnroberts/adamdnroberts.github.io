@@ -9,7 +9,7 @@
       "name": "Municipios"
     },
     "tileset": {
-      "sourceLayer": "municipios",
+      "sourceLayer": "estados",
       "source": {
         "type": "vector",
         "url": "mapbox://adamdnroberts.mexico"
