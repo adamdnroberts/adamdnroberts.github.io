@@ -8,11 +8,11 @@ nav_order: 2
 ---
 
 ### Working Papers
-1. “Who’s Afraid of the PRD? Learning about New Parties in Hegemonic Party Systems"
+1. “Opposition Parties and Information Diffusion in Competitive Authoritarian Systems"
    <details>
      <summary><strong>Abstract</strong></summary>
      <p>
-       How do voters in dominant-party systems learn about opposition parties? Electing opposition parties is risky when their governance quality is uncertain, but voters can reduce this uncertainty by observing and learning from neighboring sub-national governments’ experiences with opposition leadership. I examine how opposition governance in neighboring municipalities affects support for opposition candidates in municipal elections in 1990s Mexico. Using a close-election regression discontinuity design, I find that municipalities with exogenous exposure to PRD-governed neighbors increased their support for the PRD by 12-15 percentage points compared to municipalities with PRI-governed neighbors. This effect is specific to the PRD and does not extend to the PAN, a better-known opposition party. These findings provide insight into how governance information spreads across electoral borders and highlight that opposition parties are not necessarily perceived equally in dominant-party systems.
+       How do voters in competitive authoritarian systems learn about opposition parties? Electing opposition parties is risky when their governance quality is uncertain, but voters can reduce this uncertainty by observing and learning from neighboring sub-national governments’ experiences with opposition leadership. I examine how opposition governance in neighboring municipalities affects support for opposition candidates in municipal elections in 1990s Mexico. Using a close-election regression discontinuity design, I find that municipalities with exogenous exposure to PRD-governed neighbors increased their support for the PRD by 12-15 percentage points compared to municipalities with PRI-governed neighbors. This effect is specific to the PRD and does not extend to the PAN, a better-known opposition party. These findings provide insight into how governance information spreads across electoral borders and highlight that opposition parties are not necessarily perceived equally in competitive authoritarian systems.
      </p>
    </details>
    
