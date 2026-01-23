@@ -10,7 +10,7 @@ nav_order: 3
 ### Teaching Assistant
 
 - **Data Analysis II (Undergrad)**, University of Rochester  
-  _Prof. Curt Signorino, Spring 2026_ [[Syllabus]()]
+  _Prof. Curt Signorino, Spring 2026_ [[Syllabus](https://adamdnroberts.github.io/assets/pdf/Syll205_2026.pdf)]
 
 - **Data Analysis I (Undergrad)**, University of Rochester  
   _Prof. Curt Signorino, Fall 2025_ [[Syllabus](https://www.sas.rochester.edu/psc/syllabi/20252026/200_PSCI_Signorino_2025.pdf)]
