@@ -52,6 +52,15 @@ $(document).ready(function () {
     }
   });
 
+  // open PDF and file links in a new tab
+  $("a[href]").each(function () {
+    var href = $(this).attr("href");
+    if (href && /\.(pdf|csv|zip|tar|gz|doc|docx|xls|xlsx|ppt|pptx|bib)(\?.*)?$/i.test(href)) {
+      $(this).attr("target", "_blank");
+      $(this).attr("rel", "noopener noreferrer");
+    }
+  });
+
   // trigger popovers
   $('[data-toggle="popover"]').popover({
     trigger: "hover",
