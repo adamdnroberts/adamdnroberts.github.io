@@ -8,7 +8,8 @@ nav_order: 2
 ---
 
 ### Working Papers
-1. “Opposition Parties and Information Diffusion in Competitive Authoritarian Systems"
+1. <a href="/assets/pdf/OvercomingInexperience_with_Appendix.pdf" target="_blank" rel="noopener noreferrer">"Overcoming Inexperience: How the Opposition Wins in
+Competitive Authoritarian Systems"</a> *Under Review.*
    <details>
      <summary><strong>Abstract</strong></summary>
      <p>
