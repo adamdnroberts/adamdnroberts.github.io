@@ -28,10 +28,14 @@ nav_order: 2
    </details>
    
    
-<!--
+
 ### Works in Progress
 
-1. “Electoral Losses and Candidate Electability in Local Elections” with Dot Sawler
+1. "Overcoming Inexperience: How the Opposition Wins in Competitive Authoritarian Systems"
 
+2. “Electoral Losses and Candidate Electability in Local Elections” with Dot Sawler
+
+
+<!--
 2. “Transparency or Political Theater? An Analysis of AMLO's Interactions with Journalists” with Kirill Kazantcez
 -->
