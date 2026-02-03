@@ -8,8 +8,7 @@ nav_order: 2
 ---
 
 ### Working Papers
-1. <a href="/assets/pdf/OvercomingInexperience_with_Appendix.pdf" target="_blank" rel="noopener noreferrer">"Overcoming Inexperience: How the Opposition Wins in
-Competitive Authoritarian Systems"</a> *Under Review.*
+1. "Overcoming Inexperience: How the Opposition Wins in Competitive Authoritarian Systems" *Under Review.* <a href="/assets/pdf/OvercomingInexperience_with_Appendix.pdf" target="_blank" rel="noopener noreferrer">[Paper]</a>
    <details>
      <summary><strong>Abstract</strong></summary>
      <p>
