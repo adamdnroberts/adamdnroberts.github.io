@@ -31,7 +31,7 @@ nav_order: 2
 
 ### Works in Progress
 
-1. "Overcoming Inexperience: How the Opposition Wins in Competitive Authoritarian Systems"
+1. "Beyond Borders: How Voters Process Information about Incumbents"
 
 2. “Electoral Losses and Candidate Electability in Local Elections” with Dot Sawler
 
