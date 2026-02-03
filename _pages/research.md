@@ -33,7 +33,7 @@ nav_order: 2
 
 1. "Beyond Borders: How Voters Process Information about Incumbents"
 
-2. “Electoral Losses and Candidate Electability in Local Elections” with Dot Sawler
+2. “Electoral Losses and Candidate Electability in Local Elections” with <a href="https://sites.google.com/view/sarah-dot-sawler/home" target="_blank" rel="noopener noreferrer">Dot Sawler</a>
 
 
 <!--
