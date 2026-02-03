@@ -43,6 +43,11 @@ $fa-font-path: "../webfonts";
 // Tabler icons location
 $ti-font-path: "../fonts";
 
+// Typography
+$font-family-serif: "Source Serif 4", Georgia, "Times New Roman", serif;
+$font-family-base: $font-family-serif;
+$font-size-base: 1.25rem; // 20px (default is 1rem/16px)
+
 // Back To Top button config
 $back-to-top-z-index: 10;
 $back-to-top-bottom: 30px;
