@@ -2,6 +2,8 @@
 layout: about
 title: About
 permalink: /
+lang: en
+lang_ref: about
 subtitle: <a href='https://www.sas.rochester.edu/psc/people/phd-current.php'>Political Science PhD Candidate, University of Rochester</a>
 
 profile:

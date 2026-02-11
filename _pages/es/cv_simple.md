@@ -5,7 +5,6 @@ title: CV
 nav: true
 nav_order: 5
 description:
-lang: en
+lang: es
 lang_ref: cv
 ---
-

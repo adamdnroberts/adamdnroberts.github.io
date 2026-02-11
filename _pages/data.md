@@ -2,9 +2,11 @@
 layout: page
 permalink: /data/
 title: Data
-description: 
+description:
 nav: true
 nav_order: 4
+lang: en
+lang_ref: data
 ---
 
 <div style="margin-bottom: 0;">

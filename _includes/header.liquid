@@ -1,9 +1,16 @@
 <header>
   <!-- Nav Bar -->
+  {% assign page_lang = page.lang | default: site.lang %}
+  {% if page_lang == 'es' %}
+    {% assign about_url = '/es/' %}
+  {% else %}
+    {% assign about_url = '/' %}
+  {% endif %}
+
   <nav id="navbar" class="navbar navbar-light navbar-expand-sm {% if site.navbar_fixed %}fixed-top{% else %}sticky-top{% endif %}" role="navigation">
     <div class="container">
-      {% if page.permalink != '/' %}
-        <a class="navbar-brand title font-weight-lighter" href="{{ site.baseurl }}/">
+      {% if page.permalink != '/' and page.permalink != '/es/' %}
+        <a class="navbar-brand title font-weight-lighter" href="{{ about_url | relative_url }}">
           {% if site.title == 'blank' %}
             {% if site.first_name %}
               <span class="font-weight-bold">
@@ -42,15 +49,21 @@
 
       <div class="collapse navbar-collapse text-right" id="navbarNav">
         <ul class="navbar-nav ml-auto flex-nowrap">
-          {% for page in site.pages %}
-            {% if page.permalink == '/' %} {% assign about_title = page.title %} {% endif %}
+          <!-- Find about page for current language -->
+          {% for p in site.pages %}
+            {% if p.lang_ref == 'about' and p.lang == page_lang %}
+              {% assign about_title = p.title %}
+            {% endif %}
           {% endfor %}
+          {% unless about_title %}
+            {% assign about_title = site.data.i18n[page_lang].nav.about | default: "About" %}
+          {% endunless %}
 
           <!-- About -->
-          <li class="nav-item {% if page.permalink == '/' %}active{% endif %}">
-            <a class="nav-link" href="{{ '/' | relative_url }}">
+          <li class="nav-item {% if page.permalink == '/' or page.permalink == '/es/' %}active{% endif %}">
+            <a class="nav-link" href="{{ about_url | relative_url }}">
               {{- about_title }}
-              {% if page.permalink == '/' %}
+              {% if page.permalink == '/' or page.permalink == '/es/' %}
                 <span class="sr-only">(current)</span>
               {% endif %}
             </a>
@@ -59,7 +72,7 @@
           <!-- Other pages -->
           {% assign sorted_pages = site.pages | sort: 'nav_order' %}
           {% for p in sorted_pages %}
-            {% if p.nav and p.autogen == null %}
+            {% if p.nav and p.autogen == null and p.lang == page_lang %}
               {% if p.dropdown %}
                 {% assign has_active_child = false %}
                 {% for child in p.children %}
@@ -141,6 +154,34 @@
               </button>
             </li>
           {% endif %}
+          <!-- Language toggle -->
+          {% if page_lang == 'es' %}
+            {% assign other_lang = 'en' %}
+          {% else %}
+            {% assign other_lang = 'es' %}
+          {% endif %}
+          {% assign lang_url = nil %}
+          {% if page.lang_ref %}
+            {% for p in site.pages %}
+              {% if p.lang_ref == page.lang_ref and p.lang == other_lang %}
+                {% assign lang_url = p.permalink %}
+              {% endif %}
+            {% endfor %}
+          {% endif %}
+          {% unless lang_url %}
+            {% if other_lang == 'es' %}
+              {% assign lang_url = '/es/' %}
+            {% else %}
+              {% assign lang_url = '/' %}
+            {% endif %}
+          {% endunless %}
+          <li class="toggle-container">
+            <a id="lang-toggle" class="lang-toggle" href="{{ lang_url | relative_url }}" title="Switch language">
+              <span class="lang-option {% if page_lang == 'en' %}lang-active{% endif %}">EN</span>
+              <span class="lang-slider"></span>
+              <span class="lang-option {% if page_lang == 'es' %}lang-active{% endif %}">ES</span>
+            </a>
+          </li>
         </ul>
       </div>
     </div>

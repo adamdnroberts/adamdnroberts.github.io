@@ -5,6 +5,8 @@ title: Teaching
 description:
 nav: true
 nav_order: 3
+lang: en
+lang_ref: teaching
 ---
 
 ### Teaching Assistant

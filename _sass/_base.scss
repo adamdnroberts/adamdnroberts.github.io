@@ -395,6 +395,41 @@ ul.task-list input[type="checkbox"] {
   }
 }
 
+// Language toggle
+.lang-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 2px;
+  border-radius: 12px;
+  background-color: var(--global-bg-color);
+  border: 1px solid var(--global-text-color);
+  text-decoration: none;
+  font-size: 0.75rem;
+  font-weight: 600;
+  line-height: 1;
+  vertical-align: middle;
+  margin-left: 10px;
+  margin-top: 10px;
+
+  &:hover {
+    text-decoration: none;
+    border-color: var(--global-hover-color);
+  }
+
+  .lang-option {
+    padding: 2px 6px;
+    border-radius: 10px;
+    color: var(--global-text-color);
+    transition: all 0.2s ease;
+  }
+
+  .lang-option.lang-active {
+    background-color: var(--global-theme-color);
+    color: white;
+  }
+}
+
 // Social (bottom)
 
 .social {

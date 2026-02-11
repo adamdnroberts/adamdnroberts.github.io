@@ -1,0 +1,13 @@
+en:
+  nav:
+    about: "About"
+    cv: "CV"
+  footer:
+    last_updated: "Last updated"
+
+es:
+  nav:
+    about: "Inicio"
+    cv: "CV"
+  footer:
+    last_updated: "Última actualización"

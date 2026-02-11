@@ -1,3 +1,5 @@
+{% assign page_lang = page.lang | default: site.lang %}
+{% assign last_updated_label = site.data.i18n[page_lang].footer.last_updated | default: "Last updated" %}
 {% capture footer_contents %}
   &copy; Copyright {{ site.time | date: '%Y' }}
   {{ site.first_name }}
@@ -7,7 +9,7 @@
     <a href="{{ site.url }}{{ site.baseurl }}{{ site.impressum_path }}">Impressum</a>.
   {% endif %}
   {% if site.last_updated %}
-    Last updated: {{ 'now' | date: '%B %d, %Y' }}.
+    {{ last_updated_label }}: {{ 'now' | date: '%B %d, %Y' }}.
   {% endif %}
 {% endcapture %}
 
