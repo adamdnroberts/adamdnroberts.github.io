@@ -9,12 +9,26 @@ ninja.data = [{
     handler: () => {
       window.location.href = "/";
     },
-  },{id: "nav-research",
+  },{id: "nav-investigación",
+          title: "Investigación",
+          description: "",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/es/research/";
+          },
+        },{id: "nav-research",
           title: "Research",
           description: "",
           section: "Navigation",
           handler: () => {
             window.location.href = "/research/";
+          },
+        },{id: "nav-docencia",
+          title: "Docencia",
+          description: "",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/es/teaching/";
           },
         },{id: "nav-teaching",
           title: "Teaching",
@@ -22,6 +36,13 @@ ninja.data = [{
           section: "Navigation",
           handler: () => {
             window.location.href = "/teaching/";
+          },
+        },{id: "nav-cv",
+          title: "CV",
+          description: "",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/assets/pdf/CV_AdamRoberts.pdf";
           },
         },{id: "nav-cv",
           title: "CV",
