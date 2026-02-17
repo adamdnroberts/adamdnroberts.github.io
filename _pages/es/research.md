@@ -28,8 +28,8 @@ lang_ref: research
    </details>
 
 
-### Trabajos en Progreso
+### Obras en Progreso
 
 1. "Beyond Borders: How Voters Process Information about Incumbents"
 
-2. "Electoral Losses and Candidate Electability in Local Elections" con <a href="https://sites.google.com/view/sarah-dot-sawler/home" target="_blank" rel="noopener noreferrer">Dot Sawler</a>
+2. "Electoral Losses and Candidate Electability in Local Elections" con <a href="https://sites.google.com/view/dot-sawler/" target="_blank" rel="noopener noreferrer">Dot Sawler</a>
