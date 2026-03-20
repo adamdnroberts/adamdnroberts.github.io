@@ -21,7 +21,7 @@ lang_ref: research
 
 
 
-2. “Geographic Representation and Information Capacity in the European Commission” *Under Review.* <a href="https://osf.io/preprints/socarxiv/8vgu6_v4" target="_blank" rel="noopener noreferrer">[Paper]</a>
+2. “Geographic Representation and Information Capacity in the European Commission” *Under Review.* <a href="https://doi.org/10.31235/osf.io/8vgu6_v4" target="_blank" rel="noopener noreferrer">[Paper]</a>
    <details>
      <summary><strong>Abstract</strong></summary>
      <p>
