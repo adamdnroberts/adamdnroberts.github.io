@@ -21,11 +21,11 @@ lang_ref: research
 
 
 
-2. “Geographic Representation and Information Capacity in the European Commission” *Under Review.* <a href="https://doi.org/10.31235/osf.io/8vgu6_v2" target="_blank" rel="noopener noreferrer">[Paper]</a>
+2. “Geographic Representation and Information Capacity in the European Commission” *Under Review.* <a href="https://osf.io/preprints/socarxiv/8vgu6_v4" target="_blank" rel="noopener noreferrer">[Paper]</a>
    <details>
      <summary><strong>Abstract</strong></summary>
      <p>
-       International organizations (IOs) must decide between prioritizing qualifications or geographic representation of member states when recruiting staff. Many IOs assume a trade-off between expertise and representation, where the former increases capacity and the latter increases legitimacy. However, this paper provides evidence that geographic representation can enhance bureaucratic information capacity. Using the European Commission's Directorate-General for Economic and Financial Affairs as a case study, I provide evidence that increasing representation of bureaucrats from a member state increases the accuracy of that state's economic forecasts. This effect, which I call "national expertise," decreases as member state representation within the Commission increases and is most pronounced for large economies. These findings highlight that prioritizing geographic balance in IOs may positively impact both legitimacy and capacity.
+       The European Union prioritizes geographic representation of member states when recruiting staff. Many assume a trade-off between expertise and geographic representation, where the former increases capacity and the latter increases legitimacy. However, this paper provides evidence that geographic representation can enhance bureaucratic information capacity. Using the European Commission's Directorate-General for Economic and Financial Affairs as a case study, I provide evidence that increasing representation of bureaucrats from a member state is associated with higher accuracy in that state's economic forecasts. This association decreases as member state representation within the Commission increases. These findings suggest that prioritizing geographic balance in the EU need not come at the cost of information capacity, and may in fact improve it.
      </p>
    </details>
    
