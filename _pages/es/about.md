@@ -25,7 +25,11 @@ latest_posts:
   limit: 3
 ---
 
-Soy candidato a doctor en Ciencias Políticas en la University of Rochester y [becario graduado del Centro de Democracia](<https://www.sas.rochester.edu/democracycenter/research/graduate-fellows.html>) para el año académico 2025-2026. Estudio la política comparada de democracias en desarrollo, con un enfoque regional en América Latina, particularmente México. Mi investigación emplea métodos cuantitativos. Obtuve mi licenciatura en Ciencias Políticas y Economía de Brigham Young University en 2021.
+Soy candidato a doctorado en Ciencias Políticas en la University of Rochester y [becario graduado del Centro de Democracia](<https://www.sas.rochester.edu/democracycenter/research/graduate-fellows.html>) para el año académico 2025-2026. Mi investigación se sitúa en la intersección de la política comparada y la economía política, con un enfoque particular en la rendición de cuentas electoral, la gobernanza local y la política espacial, con aplicaciones empíricas en América Latina, especialmente México.
+
+Metodológicamente, me especializo en métodos de inferencia causal y ciencia de datos aplicada, empleando herramientas para el análisis de datos geoespaciales y experimentos de encuesta. Actualmente, desarrollo un experimento de campo en México diseñado para evaluar cómo la provisión de puntos de referencia informativos sobre el desempeño municipal influye en la rendición de cuentas electoral a nivel local.
+
+Antes de mi doctorado, obtuve mi licenciatura en Ciencias Políticas y Economía de Brigham Young University en 2021.
 
 ¡Tengo un nombre increíblemente común! Para aclarar, no soy el Profesor Emérito [Sir Adam Roberts](<https://en.wikipedia.org/wiki/Adam_Roberts_(scholar)>), el novelista de ciencia ficción [Adam Charles Roberts](<https://en.wikipedia.org/wiki/Adam_Roberts_(British_writer)>), ni ninguno de [estos Adam Roberts](<https://adamdnroberts.github.io/adam_roberts_directory/>).
 
