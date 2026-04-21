@@ -2,9 +2,9 @@
 layout: page
 permalink: /research/
 title: Research
-description:
+description: Working papers and works in progress by Adam D. Roberts on electoral accountability, local governance, and spatial politics.
 nav: true
-nav_order: 2
+nav_order: 1
 lang: en
 lang_ref: research
 ---

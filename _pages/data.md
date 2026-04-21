@@ -2,9 +2,9 @@
 layout: page
 permalink: /data/
 title: Data
-description:
+description: Datasets produced by Adam D. Roberts, including the European Commission Nationalities Dataset (2011–2022).
 nav: true
-nav_order: 4
+nav_order: 3
 lang: en
 lang_ref: data
 ---

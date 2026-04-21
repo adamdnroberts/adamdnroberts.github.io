@@ -2,9 +2,9 @@
 layout: page
 permalink: /es/research/
 title: Investigación
-description:
+description: Artículos de trabajo y proyectos en progreso de Adam D. Roberts sobre rendición de cuentas electoral, gobernanza local y política espacial.
 nav: true
-nav_order: 2
+nav_order: 1
 lang: es
 lang_ref: research
 ---
@@ -19,7 +19,7 @@ lang_ref: research
    </details>
 
 
-2. "Geographic Representation and Information Capacity in the European Commission" *En revisión.* <a href="https://osf.io/preprints/socarxiv/8vgu6_v4" target="_blank" rel="noopener noreferrer">[Artículo]</a>
+2. "Geographic Representation and Information Capacity in the European Commission" *En revisión.* <a href="https://doi.org/10.31235/osf.io/8vgu6_v4" target="_blank" rel="noopener noreferrer">[Artículo]</a>
    <details>
      <summary><strong>Resumen</strong></summary>
      <p>
