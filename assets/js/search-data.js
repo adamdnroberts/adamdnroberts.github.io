@@ -11,28 +11,28 @@ ninja.data = [{
     },
   },{id: "nav-investigación",
           title: "Investigación",
-          description: "",
+          description: "Artículos de trabajo y proyectos en progreso de Adam D. Roberts sobre rendición de cuentas electoral, gobernanza local y política espacial.",
           section: "Navigation",
           handler: () => {
             window.location.href = "/es/research/";
           },
         },{id: "nav-research",
           title: "Research",
-          description: "",
+          description: "Working papers and works in progress by Adam D. Roberts on electoral accountability, local governance, and spatial politics.",
           section: "Navigation",
           handler: () => {
             window.location.href = "/research/";
           },
         },{id: "nav-docencia",
           title: "Docencia",
-          description: "",
+          description: "Experiencia docente de Adam D. Roberts en la University of Rochester y Brigham Young University.",
           section: "Navigation",
           handler: () => {
             window.location.href = "/es/teaching/";
           },
         },{id: "nav-teaching",
           title: "Teaching",
-          description: "",
+          description: "Teaching assistant experience of Adam D. Roberts at the University of Rochester and Brigham Young University.",
           section: "Navigation",
           handler: () => {
             window.location.href = "/teaching/";
