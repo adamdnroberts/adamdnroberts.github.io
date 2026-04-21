@@ -1,5 +1,5 @@
 {% assign page_lang = page.lang | default: site.lang %}
-{% assign last_updated_label = site.data.i18n[page_lang].footer.last_updated | default: "Last updated" %}
+{% assign last_updated_label = site.data.i18n[page_lang].footer.last_updated | default: 'Last updated' %}
 {% capture footer_contents %}
   &copy; Copyright {{ site.time | date: '%Y' }}
   {{ site.first_name }}

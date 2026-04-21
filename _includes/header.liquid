@@ -56,7 +56,7 @@
             {% endif %}
           {% endfor %}
           {% unless about_title %}
-            {% assign about_title = site.data.i18n[page_lang].nav.about | default: "About" %}
+            {% assign about_title = site.data.i18n[page_lang].nav.about | default: 'About' %}
           {% endunless %}
 
           <!-- About -->
@@ -160,7 +160,7 @@
           {% else %}
             {% assign other_lang = 'es' %}
           {% endif %}
-          {% assign lang_url = nil %}
+          {% assign lang_url = null %}
           {% if page.lang_ref %}
             {% for p in site.pages %}
               {% if p.lang_ref == page.lang_ref and p.lang == other_lang %}
