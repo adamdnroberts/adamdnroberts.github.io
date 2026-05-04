@@ -141,6 +141,9 @@ newsletter:
 # -----------------------------------------------------------------------------
 
 collections:
+  courses:
+    output: true
+    permalink: /courses/:path/
   books:
     output: true
   news:
@@ -193,8 +196,6 @@ exclude:
   - includes/repository
   - _news/
   - includes/news.liquid
-  - _posts/
-  - _pages/blog.md
   - _bibliography/
   - _pages/publications.md
   - _pages/dropdown.md
