@@ -31,7 +31,7 @@ lang_ref: teaching
 
 ### Tutorials
 
-- **[Web Scraping with BeautifulSoup and Selenium](/teaching/web-scraping-tutorial/)**, SICSS
-- **[LangExtract Tutorial](/teaching/langextract-tutorial/)**, SICSS
-- **[Audio to Text Transcription Tutorial](/teaching/transcription-tutorial/)**, SICSS
-- **[Introduction to R Shiny](/teaching/shiny-tutorial/)**, SICSS
+- **[Web Scraping with BeautifulSoup and Selenium](/teaching/web-scraping-tutorial/){:target="_blank" rel="noopener noreferrer"}**, SICSS
+- **[LangExtract Tutorial](/teaching/langextract-tutorial/){:target="_blank" rel="noopener noreferrer"}**, SICSS
+- **[Audio to Text Transcription Tutorial](/teaching/transcription-tutorial/){:target="_blank" rel="noopener noreferrer"}**, SICSS
+- **[Introduction to R Shiny](/teaching/shiny-tutorial/){:target="_blank" rel="noopener noreferrer"}**, SICSS
