@@ -28,3 +28,11 @@ lang_ref: teaching
 
 - **Intro to International Relations**, Brigham Young University  
   _Prof. Scott Cooper, Spring 2019_
+
+### Tutorials
+
+- **[Web Scraping with BeautifulSoup and Selenium](/teaching/web-scraping-tutorial/)**, SICSS
+- **[LangExtract Tutorial](/teaching/langextract-tutorial/)**, SICSS
+- **[Speaker Diarization Tutorial](/teaching/speaker-diarization-tutorial/)**, SICSS
+- **[Audio to Text Transcription Tutorial](https://drive.google.com/file/d/1kyBRMs3p9oBDuVcQlkR7bSn9a1xLBdMe/view?usp=sharing)**, SICSS
+- **[Introduction to R Shiny](/teaching/shiny-tutorial/)**, SICSS

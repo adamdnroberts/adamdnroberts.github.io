@@ -1,0 +1,66 @@
+post_num,type,text
+1,,I hate that “an SQL query” and “a SQL query” might be both correct.
+2,,"AI is expensive, but we're doing our best to make it available as cheaply as possible."
+3,,"We’re excited to launch the Posit Open Source website! 🚀
+
+We’ve unified 15+ years of tools, 900+ blogs, and 1,600+ videos in one place.
+
+Explore it here:opensource.posit.coHuge thanks to the team:@cwick.co.nzGreg Swinehart@hadley.nz@ivelasq3.bsky.social@jeroenjanssens.com"
+4,,"I've been thinking that not only did I learn to code before AI, I learned to code before StackOverflow, and even before the internet. Does anyone else remember implementing computer games by typing code out of an Usborne book?"
+5,,"Back in my day we really did have to walk up hill to school both ways, in the snow."
+6,,"OMG this!colorcomputerarchive.com/repo/Documen...(although I was 3 when that was published so either it got to New Zealand later, or I used a later edition)"
+7,,#RStatsx#WeavingHoundstooth digital weaving in color!#loom@weaving
+8,,"I'm bringing my substack back to life to talk about AI and data science:open.substack.com/pub/tidydesi....  I have conflicted feelings about both AI and writing about AI but I want to try and work through them in the open, and I hope you'll join me on this journey."
+9,,"We have an open data science role on our team. The role is in our Cupertino office (no remote) and is open only in the US. 
+
+More details:jobs.apple.com/en-us/detail..."
+10,,"I spent the past semester building interactive teaching apps with AI-assisted coding. I used my personal website to share them with my students, but that makes them hard to find for other educators.
+
+So I built Galvoro —galvoro.app"
+11,,"The latest release of#Positronwent out last week, and it is chock full of exciting stuff! 🤩 Check out the new Packages pane, inline output for Quarto, the new Posit Assistant interface, and more:opensource.posit.co/blog/2026-05..."
+12,,Are you at#PyConUS? So is Posit! Find us at our unmissable sign!!
+13,,"✍️ 15 Years of rOpenSci, and We’re Just Getting Started 🎉 by The rOpenSci Team
+
+rOpenSci turns 15! 🎉 We're celebrating all year long, starting with three virtual community events on June.
+
+Come connect, reflect, and help shape the next 15 years […][Original post on hachyderm.io]"
+14,,I'm please to celebrate that legendry 0.3.0 has hit the streets on CRAN 🎉 Legendry is a ggplot2 extension that lets you draw more guides. Read about all the guide goodness in this minor update here:teunbrand.github.io/teunbrand_bl...#rstats#ggplot2
+15,,"I'm checking out the new packages pane in our#PositronIDE. Python or#RStats. The little blue arrows mean package updates are available. Search, sort, install, update, remove, and filter by category. More cool metadata coming in a future release."
+16,,"Posit AI is $20/mo, most of which goes to model API costs. Does that mean other, subsidized subscriptions provide more tokens at the same price point?@sara-altman.bsky.socialand I wrote about the tokenomics of Posit AI and the end of token subsidies:posit.co/blog/posit-a..."
+17,,"odbc 1.7.0, an#rstatspkg that allows users to connect to ODBC databases, is now on CRAN! This release tightens integration with Databricks and Snowflake, in addition to a few provider-agnostic bug fixes.github.com/r-dbi/odbc/r..."
+18,,"I have loved working with@ropensci.orgso much! ❤️
+
+For the qualtRics package specifically, we are currently looking for a new maintainer as I no longer deal with Qualtrics as part of my daily work. If you are a user of both#rstatsand Qualtrics, let's chat:github.com/ropensci/qua..."
+19,,"Closing the loop on last week's Portable#rstatspost. Hadley reached out, the conversation went well, attribution is fixed, and the ecosystem gets maintained Portable R builds. 
+
+Longer update on the blog...blog.thecoatlessprofessor.com/posts/closin..."
+20,,"Our Posit colleagues@emilhvitfeldt.bsky.social@jeroenjanssens.com@ivelasq3.bsky.socialand@mchow.comwill be at PyCon US in a couple of days!
+
+Stop by the Posit booth, say hi, and pick up a sticker or two 💚"
+21,,"Quarto 1.9 brings Typst even closer to LaTeX parity with 📖 Typst Books, ✍️ margins for figures, tables, and citations via the Marginalia package, and 🛜 new typst-gather tool for reliable, offline rendering.
+
+Details here:quarto.org/docs/blog/po..."
+22,,Super excited to get this at my door today! Ursula Laa and my book on exploring high-d data and models is in print! Book website iswww.routledge.com/Interactivel...if interested I think my 30% discount code might work for you - msg me. Time to updatedicook.github.io/mulgar_book/too!#rstats
+23,,A lot of people like to play computer games. I like to play computer games too. My favorite is dump a couple gigabytes of CSV files on my computer and let me fuck around until I find out.
+24,,"DATA SCIENTIST JOB ALERT 🚨
+
+My friend is looking for a new data scientist to join her team. Details in link. Must be NY based.
+
+If you’re interested or have questions, send me a note!#careers#hiring#datajobs.ashbyhq.com/graphite/08f..."
+25,,"The newest release of Posit Assistant, an agent for coding and data analysis, includes a ""data cleaning mode."" When enabled, the agent will run quality checks and surface decisions about e.g. import issues, factor levels, etc to the user.
+
+In the AI Newsletter:opensource.posit.co/blog/2026-05..."
+26,,"🗞️ Here's the latest edition of the Posit AI newsletter (now on the Posit Open Source blog!).
+
+  - A new Data Cleaning Mode for Posit Assistant
+  - The tabpfn package: pre-trained neural network for prediction
+  - In-context learning
+
+📬 Read the newsletter:opensource.posit.co/blog/2026-05..."
+27,,I felt a strange burning sensation over my entire body when I entered this building
+28,,"OpenTelemetry has come to R 🎉
+
+Shiny, plumber2, mirai, httr2, ellmer, knitr, testthat, and DBI are now instrumented: production-grade traces from R with no code changes. Set a few env vars and telemetry flows to the backend of your choice.
+
+Full write-up:opensource.posit.co/blog/2026-05...#Rstats"
+29,,"We are pleased to announce that Mikael Jagan has joined the R Core Team.#RStatsHe has been an active contributor to the R project for several years, proposing bug fixes and enhancements. Further, he has been co-authoring/maintaining the important Matrix package and more recently lme4 and glmmTMB."
