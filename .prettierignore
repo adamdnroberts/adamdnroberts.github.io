@@ -11,4 +11,6 @@ _sass/font-awesome/*.scss
 _sass/tabler-icons/*.scss
 _scripts/*
 _pages/*
+assets/html/shiny-tutorial.html
+assets/jupyter/*.json
 
