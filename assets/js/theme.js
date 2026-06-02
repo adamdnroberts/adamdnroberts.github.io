@@ -67,17 +67,14 @@ let applyTheme = () => {
     }
   }
 
-  // Set jupyter notebooks themes.
+  // Always render embedded notebooks in light mode. Rich outputs (matplotlib
+  // PNGs, pandas DataFrames, embedded HTML) have baked-in light styling that
+  // can't be recolored for dark mode, so force light for readability.
   let jupyterNotebooks = document.getElementsByClassName("jupyter-notebook-iframe-container");
   for (let i = 0; i < jupyterNotebooks.length; i++) {
     let bodyElement = jupyterNotebooks[i].getElementsByTagName("iframe")[0].contentWindow.document.body;
-    if (theme == "dark") {
-      bodyElement.setAttribute("data-jp-theme-light", "false");
-      bodyElement.setAttribute("data-jp-theme-name", "JupyterLab Dark");
-    } else {
-      bodyElement.setAttribute("data-jp-theme-light", "true");
-      bodyElement.setAttribute("data-jp-theme-name", "JupyterLab Light");
-    }
+    bodyElement.setAttribute("data-jp-theme-light", "true");
+    bodyElement.setAttribute("data-jp-theme-name", "JupyterLab Light");
   }
 
   // Updates the background of medium-zoom overlay.

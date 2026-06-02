@@ -37,19 +37,17 @@ $(document).ready(function () {
   cssLink.rel = "stylesheet";
   cssLink.type = "text/css";
 
-  let jupyterTheme = determineComputedTheme();
-
+  // Embedded notebooks always render in light mode (see theme.js): rich outputs
+  // have baked-in light styling that can't be recolored for dark mode.
   $(".jupyter-notebook-iframe-container iframe").each(function () {
     $(this).contents().find("head").append(cssLink);
 
-    if (jupyterTheme == "dark") {
-      $(this).bind("load", function () {
-        $(this).contents().find("body").attr({
-          "data-jp-theme-light": "false",
-          "data-jp-theme-name": "JupyterLab Dark",
-        });
+    $(this).bind("load", function () {
+      $(this).contents().find("body").attr({
+        "data-jp-theme-light": "true",
+        "data-jp-theme-name": "JupyterLab Light",
       });
-    }
+    });
   });
 
   // open PDF and file links in a new tab
