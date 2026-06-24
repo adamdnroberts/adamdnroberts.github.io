@@ -9,6 +9,9 @@ lang: en
 lang_ref: research
 ---
 
+### Job Market Paper
+1. "Beyond Borders: How Voters Process Information about Incumbents" *Draft available upon request.*
+
 ### Working Papers
 1. "Overcoming Inexperience: How the Opposition Wins in Competitive Authoritarian Systems" *Under Review.* <a href="https://doi.org/10.31235/osf.io/2zjmt_v1" target="_blank" rel="noopener noreferrer">[Paper]</a>
    <details>
@@ -21,7 +24,7 @@ lang_ref: research
 
 
 
-2. “Geographic Representation and Information Capacity in the European Commission” *Under Review.* <a href="https://doi.org/10.31235/osf.io/8vgu6_v4" target="_blank" rel="noopener noreferrer">[Paper]</a>
+2. “Geographic Representation and Information Capacity in the European Commission” *R&R at European Union Politics.* <a href="https://doi.org/10.31235/osf.io/8vgu6_v4" target="_blank" rel="noopener noreferrer">[Paper]</a>
    <details>
      <summary><strong>Abstract</strong></summary>
      <p>
@@ -33,11 +36,10 @@ lang_ref: research
 
 ### Works in Progress
 
-1. "Beyond Borders: How Voters Process Information about Incumbents"
+1. “When the Nomads Arrive: Foreign Remote Workers and Electoral Backlash in Latin America”
 
-2. “Electoral Losses and Candidate Electability in Local Elections” with <a href="https://sites.google.com/view/dot-sawler/" target="_blank" rel="noopener noreferrer">Dot Sawler</a>
+2. “Transparency or Theater? The Informational Value of Executive Press Conferences”
 
+3. “Electoral Losses and Candidate Electability in Local Elections” with <a href="https://sites.google.com/view/dot-sawler/" target="_blank" rel="noopener noreferrer">Dot Sawler</a>
 
-<!--
-2. “Transparency or Political Theater? An Analysis of AMLO's Interactions with Journalists” with Kirill Kazantcez
--->
+4. “The Straw That Breaks the Voter's Back: Corruption and Electoral Punishment” with <a href="https://ruth-holloway.github.io" target="_blank" rel="noopener noreferrer">Ruth Holloway</a>

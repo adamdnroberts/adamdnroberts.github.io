@@ -9,6 +9,9 @@ lang: es
 lang_ref: research
 ---
 
+### Job Market Paper
+1. "Beyond Borders: How Voters Process Information about Incumbents" *Borrador disponible a solicitud.*
+
 ### Artículos en Proceso de Revisión
 1. "Overcoming Inexperience: How the Opposition Wins in Competitive Authoritarian Systems" *En revisión.* <a href="https://doi.org/10.31235/osf.io/2zjmt_v1" target="_blank" rel="noopener noreferrer">[Artículo]</a>
    <details>
@@ -19,7 +22,7 @@ lang_ref: research
    </details>
 
 
-2. "Geographic Representation and Information Capacity in the European Commission" *En revisión.* <a href="https://doi.org/10.31235/osf.io/8vgu6_v4" target="_blank" rel="noopener noreferrer">[Artículo]</a>
+2. "Geographic Representation and Information Capacity in the European Commission" *R&R en European Union Politics.* <a href="https://doi.org/10.31235/osf.io/8vgu6_v4" target="_blank" rel="noopener noreferrer">[Artículo]</a>
    <details>
      <summary><strong>Resumen</strong></summary>
      <p>
@@ -30,6 +33,10 @@ lang_ref: research
 
 ### Obras en Progreso
 
-1. "Beyond Borders: How Voters Process Information about Incumbents"
+1. "When the Nomads Arrive: Foreign Remote Workers and Electoral Backlash in Latin America"
 
-2. "Electoral Losses and Candidate Electability in Local Elections" con <a href="https://sites.google.com/view/dot-sawler/" target="_blank" rel="noopener noreferrer">Dot Sawler</a>
+2. "Transparency or Theater? The Informational Value of Executive Press Conferences"
+
+3. "Electoral Losses and Candidate Electability in Local Elections" con <a href="https://sites.google.com/view/dot-sawler/" target="_blank" rel="noopener noreferrer">Dot Sawler</a>
+
+4. "The Straw That Breaks the Voter's Back: Corruption and Electoral Punishment" con <a href="https://ruth-holloway.github.io" target="_blank" rel="noopener noreferrer">Ruth Holloway</a>
