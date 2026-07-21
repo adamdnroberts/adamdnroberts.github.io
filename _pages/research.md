@@ -10,7 +10,7 @@ lang_ref: research
 ---
 
 ### Job Market Paper
-1. "Beyond Borders: How Voters Process Information about Incumbents" *Draft paper available upon request.* <a href="https://adamdnroberts.github.io/assets/pdf/AdamRoberts_PolMeth_2026_Poster.pdf" target="_blank" rel="noopener noreferrer">[Poster]</a>
+1. "Beyond Borders: How Voters Process Information about Incumbents" *Draft paper available upon request.*
 
 ### Working Papers
 1. "Overcoming Inexperience: How the Opposition Wins in Competitive Authoritarian Systems" *Under Review.* <a href="https://doi.org/10.31235/osf.io/2zjmt_v1" target="_blank" rel="noopener noreferrer">[Paper]</a>
