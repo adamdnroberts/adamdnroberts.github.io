@@ -25,9 +25,11 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-I am a PhD candidate in Political Science at the University of Rochester and a [Democracy Center Graduate Fellow](<https://www.sas.rochester.edu/democracycenter/research/graduate-fellows.html>) for the 2025-2026 academic year. My research sits at the intersection of comparative politics and political economy, with a particular focus on electoral accountability and local governance. I draw on empirical applications primarily from Latin America, especially Mexico. Methodologically, I specialize in causal inference methods and applied data science. 
+I am a PhD candidate in Political Science at the University of Rochester. My research sits at the intersection of comparative politics and political economy, with a particular focus on electoral accountability and local governance. I draw on empirical applications primarily from Latin America, especially Mexico. Methodologically, I specialize in causal inference methods and applied data science. 
 
-Before graduate school I earned my B.A. in Political Science and Economics from Brigham Young University in 2021.
+I am on the 2026-2027 job market!
+
+I was a [University of Rochester Democracy Center Graduate Fellow](<https://www.sas.rochester.edu/democracycenter/research/graduate-fellows.html>) for the 2025-2026 academic year. Before graduate school I earned my B.A. in Political Science and Economics from Brigham Young University in 2021.
 
 I have an incredibly common name! To clarify, I am not Emeritus Professor [Sir Adam Roberts](<https://en.wikipedia.org/wiki/Adam_Roberts_(scholar)>), the science fiction novelist [Adam Charles Roberts](<https://en.wikipedia.org/wiki/Adam_Roberts_(British_writer)>), or any of [these Adam Robertses](<https://adamdnroberts.github.io/adam_roberts_directory/>).
 
