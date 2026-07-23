@@ -8,7 +8,7 @@ subtitle: <a href='https://www.sas.rochester.edu/psc/people/phd-current.php'>Pol
 
 profile:
   align: right
-  image: prof_pic.jpg
+  image: portrait4_alternate.jpeg
   image_circular: false # crops the image to make it circular
 
 selected_papers: false # includes a list of papers marked as "selected={true}"
@@ -25,9 +25,9 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-I am a PhD candidate in Political Science at the University of Rochester. My research sits at the intersection of comparative politics and political economy, with a particular focus on electoral accountability and local governance. I draw on empirical applications primarily from Latin America, especially Mexico. Methodologically, I specialize in causal inference methods and applied data science. 
+I am a PhD candidate in Political Science at the University of Rochester. My research sits at the intersection of comparative politics and political economy, with a particular focus on electoral accountability and local governance. I draw on empirical applications primarily from Latin America, especially Mexico. Methodologically, I specialize in causal inference, survey experiments, and applied data science. 
 
-I am on the 2026-2027 job market!
+**I am on the 2026-2027 job market.**
 
 I was a [University of Rochester Democracy Center Graduate Fellow](<https://www.sas.rochester.edu/democracycenter/research/graduate-fellows.html>) for the 2025-2026 academic year. Before graduate school I earned my B.A. in Political Science and Economics from Brigham Young University in 2021.
 
