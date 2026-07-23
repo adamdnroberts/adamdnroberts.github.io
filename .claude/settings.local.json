@@ -1,8 +1,5 @@
 {
   "permissions": {
-    "allow": [
-      "Read(//c/Program Files/Quarto/**)",
-      "Read(//c/Users/adamd/AppData/Local/Programs/Quarto/bin/**)"
-    ]
+    "allow": ["Read(//c/Program Files/Quarto/**)", "Read(//c/Users/adamd/AppData/Local/Programs/Quarto/bin/**)"]
   }
 }
