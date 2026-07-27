@@ -34,3 +34,5 @@ I was a [University of Rochester Democracy Center Graduate Fellow](<https://www.
 I have an incredibly common name! To clarify, I am not Emeritus Professor [Sir Adam Roberts](<https://en.wikipedia.org/wiki/Adam_Roberts_(scholar)>), the science fiction novelist [Adam Charles Roberts](<https://en.wikipedia.org/wiki/Adam_Roberts_(British_writer)>), or any of [these Adam Robertses](<https://adamdnroberts.github.io/adam_roberts_directory/>).
 
 ---
+
+<small class="text-muted">Website built with the <a href="https://github.com/alshedivat/al-folio">al-folio</a> template.</small>

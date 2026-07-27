@@ -9,9 +9,7 @@ last_name: Roberts
 contact_note: >
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
   Adam D. Roberts is a PhD candidate in political science at the University of Rochester, specializing in comparative politics, subnational governance, and Mexican municipalities.
-footer_text: >
-  Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
-  Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
+footer_text:
 keywords: adam, roberts, political science, comparative politics, university of rochester, byu, mexico # add your own keywords or leave empty
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
 icon: Logo_of_Rochester_New_York.png # the emoji used as the favicon (alternatively, provide image name in /assets/img/)

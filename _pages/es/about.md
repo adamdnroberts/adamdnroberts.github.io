@@ -34,3 +34,5 @@ Fui [becario graduado del Centro de Democracia de la University of Rochester](<h
 ¡Tengo un nombre increíblemente común! Para aclarar, no soy el Profesor Emérito [Sir Adam Roberts](<https://en.wikipedia.org/wiki/Adam_Roberts_(scholar)>), el novelista de ciencia ficción [Adam Charles Roberts](<https://en.wikipedia.org/wiki/Adam_Roberts_(British_writer)>), ni ninguno de [estos Adam Roberts](<https://adamdnroberts.github.io/adam_roberts_directory/>).
 
 ---
+
+<small class="text-muted">Sitio web creado con la plantilla <a href="https://github.com/alshedivat/al-folio">al-folio</a>.</small>
