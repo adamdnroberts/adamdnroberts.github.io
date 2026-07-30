@@ -35,4 +35,6 @@ I have an incredibly common name! To clarify, I am not Emeritus Professor [Sir A
 
 ---
 
+*Para la versión en español, haz clic en 'ES' en la parte superior derecha.*
+
 <small class="text-muted">&copy; Adam D. Roberts. Website built with the <a href="https://github.com/alshedivat/al-folio">al-folio</a> template.</small>

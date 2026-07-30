@@ -35,4 +35,6 @@ Fui [becario graduado del Centro de Democracia de la University of Rochester](<h
 
 ---
 
+*For the English version, click on 'EN' in the top right corner.*
+
 <small class="text-muted">&copy; Adam D. Roberts. Sitio web creado con la plantilla <a href="https://github.com/alshedivat/al-folio">al-folio</a>.</small>
