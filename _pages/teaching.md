@@ -2,6 +2,7 @@
 layout: page
 permalink: /teaching/
 title: Teaching
+hide_title: true
 description: Teaching assistant experience of Adam D. Roberts at the University of Rochester and Brigham Young University.
 nav: true
 nav_order: 2

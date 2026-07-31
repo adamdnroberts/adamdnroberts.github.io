@@ -2,6 +2,7 @@
 layout: page
 permalink: /es/research/
 title: Investigación
+hide_title: true
 description: Artículos de trabajo y proyectos en progreso de Adam D. Roberts sobre rendición de cuentas electoral, gobernanza local y política espacial.
 nav: true
 nav_order: 1

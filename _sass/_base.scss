@@ -5,7 +5,33 @@
 // Base font size — everything else is sized in rem/em, so this scales the
 // whole site proportionally. Browser default is 100% (16px).
 html {
-  font-size: 125%; // 18px
+  font-size: 112.5%; // 18px
+}
+
+// The about page gets a larger base size than the rest of the site. The class
+// comes from the page's layout name, set on <html> in _layouts/default.liquid.
+html.layout-about {
+  font-size: 125%; // 20px
+}
+
+// The navbar is pinned to an absolute size so it stays identical on every page:
+// it would otherwise inherit the per-page root size set above. Everything
+// inside is sized in em so it stays proportional to the pinned value — rem
+// would resolve against the root and drift again.
+.navbar {
+  font-size: 18px;
+  padding: 0.5em 1em;
+
+  .navbar-brand {
+    font-size: 1.25em;
+  }
+
+  // Vertical only — the horizontal padding comes from MDB in px, so it does
+  // not drift with the root size and should keep its own value.
+  .nav-link {
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+  }
 }
 
 // Typography

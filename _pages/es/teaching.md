@@ -2,6 +2,7 @@
 layout: page
 permalink: /es/teaching/
 title: Docencia
+hide_title: true
 description: Experiencia docente de Adam D. Roberts en la University of Rochester y Brigham Young University.
 nav: true
 nav_order: 2
