@@ -8,7 +8,7 @@ subtitle: <a href='https://www.sas.rochester.edu/psc/people/phd-current.php'>Pol
 
 profile:
   align: right
-  image: portrait4_alternate.jpeg
+  image: portrait3_alternate_crop.jpeg
   image_circular: false # crops the image to make it circular
 
 selected_papers: false # includes a list of papers marked as "selected={true}"

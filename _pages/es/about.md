@@ -8,7 +8,7 @@ subtitle: <a href='https://www.sas.rochester.edu/psc/people/phd-current.php'>Can
 
 profile:
   align: right
-  image: portrait4_alternate.jpeg
+  image: portrait3_alternate_crop.jpeg
   image_circular: false
 
 selected_papers: false
