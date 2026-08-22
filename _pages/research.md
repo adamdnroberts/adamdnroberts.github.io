@@ -11,7 +11,13 @@ lang_ref: research
 ---
 
 ### Job Market Paper
-1. "Beyond Borders: How Voters Process Information about Incumbents" *Draft paper available upon request.*
+1. "Which Comparison Counts? Benchmarking and Belief Updating" <a href="/assets/pdf/AdamRoberts_JMP.pdf" target="_blank" rel="noopener noreferrer">[Paper]</a>
+   <details>
+     <summary><strong>Abstract</strong></summary>
+     <p>
+       Field experiments have mixed findings on how and to what extent information changes voting behavior. Many factors may explain these mixed results, but one that remains under-explored is how benchmarking, or the presentation of performance information relative to other governments, can change interpretation. In a pre-registered survey fielded in Mexico with both descriptive and experimental components, I examine how benchmarking changes voting behavior. I find that respondents prefer benchmark municipalities that are geographically proximate, highly populated, and governed by the same party coalition as the respondent's municipality. When randomly assigned to treatment conditions that vary whether partisan benchmarks are shown to respondents, I find that only same-coalition comparisons change respondents' intentions to vote for an incumbent. This effect is driven in part by respondents updating negatively about incumbent politicians relative to opposition party coalitions.
+     </p>
+   </details>
 
 ### Working Papers
 1. "Overcoming Uncertainty: How Voters Learn about Opposition Parties Under Competitive Authoritarian Systems" *Under Review.* <a href="https://doi.org/10.31235/osf.io/2zjmt_v2" target="_blank" rel="noopener noreferrer">[Paper]</a>
@@ -25,7 +31,7 @@ lang_ref: research
 
 
 
-2. “Geographic Representation and Information Capacity in the European Commission” *R&R at European Union Politics.* <a href="https://doi.org/10.31235/osf.io/8vgu6_v4" target="_blank" rel="noopener noreferrer">[Paper]</a>
+2. “Geographic Representation and Information Capacity in the European Commission” *Conditionally Accepted at European Union Politics.* <a href="https://doi.org/10.31235/osf.io/8vgu6_v4" target="_blank" rel="noopener noreferrer">[Paper]</a>
    <details>
      <summary><strong>Abstract</strong></summary>
      <p>

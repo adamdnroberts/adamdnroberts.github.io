@@ -11,7 +11,13 @@ lang_ref: research
 ---
 
 ### Job Market Paper
-1. "Beyond Borders: How Voters Process Information about Incumbents" *Borrador disponible a solicitud.*
+1. "Which Comparison Counts? Benchmarking and Belief Updating" <a href="/assets/pdf/AdamRoberts_JMP.pdf" target="_blank" rel="noopener noreferrer">[Artículo]</a>
+   <details>
+     <summary><strong>Resumen</strong></summary>
+     <p>
+       Los experimentos de campo presentan hallazgos mixtos sobre cómo y en qué medida la información modifica el comportamiento electoral. Muchos factores pueden explicar estos resultados dispares, pero uno que permanece poco explorado es cómo el benchmarking, es decir, la presentación de información sobre el desempeño en relación con otros gobiernos, puede cambiar su interpretación. En una encuesta preregistrada realizada en México, con componentes tanto descriptivos como experimentales, examino cómo el benchmarking modifica el comportamiento electoral. Encuentro que las personas encuestadas prefieren municipios de referencia que sean geográficamente cercanos, altamente poblados y gobernados por la misma coalición partidista que la de su propio municipio. Cuando se asignan aleatoriamente a condiciones de tratamiento que varían si se muestran o no referencias partidistas, encuentro que solo las comparaciones con la misma coalición modifican la intención de votar por quien ocupa el cargo. Este efecto se debe en parte a que las personas encuestadas actualizan negativamente sus creencias sobre los titulares en relación con las coaliciones de oposición.
+     </p>
+   </details>
 
 ### Artículos en Proceso de Revisión
 1. "Overcoming Uncertainty: How Voters Learn about Opposition Parties Under Competitive Authoritarian Systems" *En revisión.* <a href="https://doi.org/10.31235/osf.io/2zjmt_v2" target="_blank" rel="noopener noreferrer">[Artículo]</a>
@@ -23,7 +29,7 @@ lang_ref: research
    </details>
 
 
-2. "Geographic Representation and Information Capacity in the European Commission" *R&R en European Union Politics.* <a href="https://doi.org/10.31235/osf.io/8vgu6_v4" target="_blank" rel="noopener noreferrer">[Artículo]</a>
+2. "Geographic Representation and Information Capacity in the European Commission" *Aceptado condicionalmente en European Union Politics.* <a href="https://doi.org/10.31235/osf.io/8vgu6_v4" target="_blank" rel="noopener noreferrer">[Artículo]</a>
    <details>
      <summary><strong>Resumen</strong></summary>
      <p>
