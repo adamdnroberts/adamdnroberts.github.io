@@ -11,7 +11,7 @@ lang_ref: research
 ---
 
 ### Job Market Paper
-1. "Which Comparison Counts? Benchmarking and Belief Updating" <a href="/assets/pdf/AdamRoberts_JMP.pdf" target="_blank" rel="noopener noreferrer">[Artículo]</a>
+1. "Which Comparison Counts? Information, Benchmarking, and Electoral Accountability" *(¿Cuál comparación importa? Información, benchmarking y rendición de cuentas electoral)* <a href="/assets/pdf/AdamRoberts_JMP.pdf" target="_blank" rel="noopener noreferrer">[Artículo]</a>
    <details>
      <summary><strong>Resumen</strong></summary>
      <p>
@@ -20,7 +20,7 @@ lang_ref: research
    </details>
 
 ### Artículos en Proceso de Revisión
-1. "Overcoming Uncertainty: How Voters Learn about Opposition Parties Under Competitive Authoritarian Systems" *En revisión.* <a href="https://doi.org/10.31235/osf.io/2zjmt_v2" target="_blank" rel="noopener noreferrer">[Artículo]</a>
+1. "Overcoming Uncertainty: How Voters Learn about Opposition Parties Under Competitive Authoritarian Systems" *(Superar la incertidumbre: cómo los votantes aprenden sobre los partidos de oposición en sistemas autoritarios competitivos)* *En revisión.* <a href="https://doi.org/10.31235/osf.io/2zjmt_v2" target="_blank" rel="noopener noreferrer">[Artículo]</a>
    <details>
      <summary><strong>Resumen</strong></summary>
      <p>
@@ -29,7 +29,7 @@ lang_ref: research
    </details>
 
 
-2. "Geographic Representation and Information Capacity in the European Commission" *Aceptado condicionalmente en European Union Politics.* <a href="https://doi.org/10.31235/osf.io/8vgu6_v4" target="_blank" rel="noopener noreferrer">[Artículo]</a>
+2. "Geographic Representation and Information Capacity in the European Commission" *(Representación geográfica y capacidad de información en la Comisión Europea)* *Aceptado condicionalmente en European Union Politics.* <a href="https://doi.org/10.31235/osf.io/8vgu6_v4" target="_blank" rel="noopener noreferrer">[Artículo]</a>
    <details>
      <summary><strong>Resumen</strong></summary>
      <p>
@@ -40,10 +40,10 @@ lang_ref: research
 
 ### Obras en Progreso
 
-1. "When the Nomads Arrive: Foreign Remote Workers and Electoral Backlash in Latin America"
+1. "When the Nomads Arrive: Foreign Remote Workers and Electoral Backlash in Latin America" *(Cuando llegan los nómadas: trabajadores remotos extranjeros y reacción electoral en América Latina)*
 
-2. "Transparency or Theater? The Informational Value of Executive Press Conferences"
+2. "Transparency or Theater? The Informational Value of Executive Press Conferences" *(¿Transparencia o teatro? El valor informativo de las conferencias de prensa del ejecutivo)*
 
-3. "Electoral Losses and Candidate Electability in Local Elections" con <a href="https://sites.google.com/view/dot-sawler/" target="_blank" rel="noopener noreferrer">Dot Sawler</a>
+3. "Electoral Losses and Candidate Electability in Local Elections" *(Derrotas electorales y elegibilidad de candidatos en elecciones locales)* con <a href="https://sites.google.com/view/dot-sawler/" target="_blank" rel="noopener noreferrer">Dot Sawler</a>
 
-4. "The Straw That Breaks the Voter's Back: Corruption and Electoral Punishment" con <a href="https://ruth-holloway.github.io" target="_blank" rel="noopener noreferrer">Ruth Holloway</a>
+4. "The Straw That Breaks the Voter's Back: Corruption and Electoral Punishment" *(La gota que colma el vaso: corrupción y castigo electoral)* con <a href="https://ruth-holloway.github.io" target="_blank" rel="noopener noreferrer">Ruth Holloway</a>

@@ -11,7 +11,7 @@ lang_ref: research
 ---
 
 ### Job Market Paper
-1. "Which Comparison Counts? Benchmarking and Belief Updating" <a href="/assets/pdf/AdamRoberts_JMP.pdf" target="_blank" rel="noopener noreferrer">[Paper]</a>
+1. "Which Comparison Counts? Information, Benchmarking, and Electoral Accountability" <a href="/assets/pdf/AdamRoberts_JMP.pdf" target="_blank" rel="noopener noreferrer">[Paper]</a>
    <details>
      <summary><strong>Abstract</strong></summary>
      <p>
