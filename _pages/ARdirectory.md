@@ -9,10 +9,12 @@ nav_order: 3
 
 Adam Roberts is an incredibly common name in both the US and the UK, which means that you might be looking for a different Adam Roberts than me. Here is a directory of all the Adam Robertses I've found while trying to SEO. If there is another Adam Roberts that you think should be added to the directory, please let me know.
 
+<em lang="es">Adam Roberts es un nombre muy común. Este directorio reúne a los otros Adam Roberts que he encontrado; si conoces a alguno que falte, avísame.</em>
+
 | Name           | Profession               |
 |----------------|--------------------------|
 | Adam Roberts   | <a rel="nofollow" href="https://en.wikipedia.org/wiki/Adam_Roberts_(scholar)">Emeritus Professor of International Relations</a> | 
-| Adam Roberts   | <a rel="nofollow" href="https://en.wikipedia.org/wiki/Adam_Roberts_(British_writer)">Science Fiction and Fantasy Novelist</a> |
+| Adam Roberts   | <a rel="nofollow" href="https://en.wikipedia.org/wiki/Adam_Roberts_(British_writer)">Science Fiction Novelist and Professor of Nineteenth Century Literature</a> |
 | Adam Roberts   | <a rel="nofollow" href="https://www.amateurgourmet.com/">Food Writer and Novelist</a> |
 | Adam Roberts   | <a rel="nofollow" href="https://en.wikipedia.org/wiki/Adam_Roberts_(footballer)">English Footballer</a> |
 | Adam Roberts   | <a rel="nofollow" href="https://en.wikipedia.org/wiki/Adam_Roberts_(motorcyclist)">Canadian Motorcyclist</a> |
@@ -23,5 +25,8 @@ Adam Roberts is an incredibly common name in both the US and the UK, which means
 | Adam Roberts   | <a rel="nofollow" href="https://www.wernewyork.com/Agent/75914/Adam-Roberts?agentId=75914&amp;saleStatusType=10&amp;sortOrder=Price&amp;sortAsc=false">NYC Real Estate Broker</a> |
 | Adam Roberts   | <a rel="nofollow" href="https://www.kent.edu/music/profile/adam-roberts">Associate Professor at Kent State University</a> |
 | Adam Roberts   | <a rel="nofollow" href="https://www.pnnl.gov/people/adam-roberts">Senior Cyber Security Researcher</a> |
+| Adam Roberts   | <a rel="nofollow" href="https://www.ratemyprofessors.com/professor/2367228">Psychology Professor at Cal State Fullerton</a> |
+| Adam Roberts   | <a rel="nofollow" href="https://www.broadwayworld.com/people/Adam-Roberts/">Stage and Screen Actor</a> |
+| Adam Roberts   | <a rel="nofollow" href="https://www.researchgate.net/profile/Adam-Roberts-4">Senior Health Economics Fellow</a> |
 
 ---
