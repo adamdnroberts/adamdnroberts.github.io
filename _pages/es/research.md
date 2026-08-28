@@ -42,8 +42,6 @@ lang_ref: research
 
 1. "When the Nomads Arrive: Foreign Remote Workers and Electoral Backlash in Latin America" *(Cuando llegan los nómadas: trabajadores remotos extranjeros y reacción electoral en América Latina)*
 
-2. "Transparency or Theater? The Informational Value of Executive Press Conferences" *(¿Transparencia o teatro? El valor informativo de las conferencias de prensa del ejecutivo)*
+2. "Electoral Losses and Candidate Electability" *(Derrotas electorales y elegibilidad de candidatos)* con <a href="https://sites.google.com/view/dot-sawler/" target="_blank" rel="noopener noreferrer">Dot Sawler</a>
 
-3. "Electoral Losses and Candidate Electability in Local Elections" *(Derrotas electorales y elegibilidad de candidatos en elecciones locales)* con <a href="https://sites.google.com/view/dot-sawler/" target="_blank" rel="noopener noreferrer">Dot Sawler</a>
-
-4. "The Straw That Breaks the Voter's Back: Corruption and Electoral Punishment" *(La gota que colma el vaso: corrupción y castigo electoral)* con <a href="https://ruth-holloway.github.io" target="_blank" rel="noopener noreferrer">Ruth Holloway</a>
+3. "The Straw That Breaks the Voter's Back: Corruption and Electoral Punishment" *(La gota que colma el vaso: corrupción y castigo electoral)* con <a href="https://ruth-holloway.github.io" target="_blank" rel="noopener noreferrer">Ruth Holloway</a>
