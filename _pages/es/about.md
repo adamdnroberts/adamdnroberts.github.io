@@ -29,7 +29,7 @@ Soy candidato a doctorado en Ciencias Políticas en la University of Rochester y
 
 **Estoy buscando posiciones académicas para el ciclo 2026-2027.**
 
-Antes de mi doctorado, obtuve mi licenciatura en Ciencias Políticas y Economía de Brigham Young University en 2021.
+Antes de mi doctorado, obtuve mi licenciatura en Ciencias Políticas y Economía de Brigham Young University (BYU) en 2021.
 
 ¡Tengo un nombre increíblemente común! Para aclarar, no soy el Profesor Emérito [Sir Adam Roberts](<https://en.wikipedia.org/wiki/Adam_Roberts_(scholar)>), el novelista de ciencia ficción [Adam Charles Roberts](<https://en.wikipedia.org/wiki/Adam_Roberts_(British_writer)>), ni ninguno de [estos Adam Roberts](<https://adamdnroberts.github.io/adam_roberts_directory/>).
 

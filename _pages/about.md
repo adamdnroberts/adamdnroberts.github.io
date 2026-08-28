@@ -29,7 +29,7 @@ I am a PhD candidate in Political Science at the University of Rochester and a [
 
 **I am on the 2026-2027 job market.**
 
-Before graduate school I earned my B.A. in Political Science and Economics from Brigham Young University in 2021.
+Before graduate school I earned my B.A. in Political Science and Economics from Brigham Young University (BYU) in 2021.
 
 I have an incredibly common name! To clarify, I am not Emeritus Professor [Sir Adam Roberts](<https://en.wikipedia.org/wiki/Adam_Roberts_(scholar)>), the science fiction novelist [Adam Charles Roberts](<https://en.wikipedia.org/wiki/Adam_Roberts_(British_writer)>), or any of [these Adam Robertses](<https://adamdnroberts.github.io/adam_roberts_directory/>).
 
