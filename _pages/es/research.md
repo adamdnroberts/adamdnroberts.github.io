@@ -11,7 +11,7 @@ lang_ref: research
 ---
 
 ### Job Market Paper
-1. "Which Comparison Counts? Information, Benchmarking, and Electoral Accountability" *(¿Cuál comparación importa? Información, benchmarking y rendición de cuentas electoral)* <a href="/assets/pdf/AdamRoberts_JMP.pdf" target="_blank" rel="noopener noreferrer">[Artículo]</a>
+1. "Which Comparison Counts? Information, Benchmarking, and Electoral Accountability" *(¿Qué comparación es la que cuenta? Información, benchmarking y rendición de cuentas electoral)* <a href="/assets/pdf/JMP_AdamRoberts.pdf" target="_blank" rel="noopener noreferrer">[Artículo]</a>
    <details>
      <summary><strong>Resumen</strong></summary>
      <p>
