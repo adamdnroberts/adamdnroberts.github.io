@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>The cost of the bridge</title>
+    <!-- GENERATED FILE - do not edit by hand.
+         Source: _src/bridge-earnings-model.jsx (see its header for the rebuild command). -->
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script>
+      // Invert the slate scale so the component's light-mode utility classes
+      // (bg-white, text-slate-900, border-slate-200, ...) render dark without
+      // rewriting every class name.
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              white: "#212529",
+              slate: {
+                50: "#2a2e33",
+                100: "#343a40",
+                200: "#3b4148",
+                300: "#4b535c",
+                400: "#8a929b",
+                500: "#a2aab3",
+                600: "#c2c8ce",
+                700: "#d6dbe0",
+                800: "#e6eaee",
+                900: "#f1f4f7",
+              },
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      html,
+      body {
+        background: #1c1c1d;
+        color: #f1f4f7;
+        margin: 0;
+        font-family:
+          -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      }
+      /* Recharts legend text inherits from the SVG, not Tailwind */
+      .recharts-legend-item-text {
+        color: #c2c8ce !important;
+        fill: #c2c8ce;
+      }
+      input[type="range"] {
+        accent-color: #7fb3d5;
+      }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.3.1/umd/react.production.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.3.1/umd/react-dom.production.min.js"></script>
+    <!-- Recharts' UMD build takes prop-types as an external global; it must load first. -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prop-types/15.8.1/prop-types.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/recharts/2.12.7/Recharts.min.js"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script>
+(() => {
+  const { useState, useMemo } = React;
+  const {
+    LineChart,
+    Line,
+    XAxis,
+    YAxis,
+    CartesianGrid,
+    Tooltip,
+    ResponsiveContainer,
+    ReferenceLine,
+    Legend
+  } = Recharts;
+  const C = {
+    straight: "#2dd4bf",
+    // teal
+    postdoc: "#fbbf24",
+    // amber
+    phdOnly: "#fb7185",
+    // rose
+    ink: "#f1f4f7",
+    muted: "#98a1ab",
+    hair: "#3b4148",
+    canvas: "#1c1c1d"
+  };
+  const money = (x) => "$" + Math.round(x).toLocaleString("en-US");
+  function Control({ label, hint, value, set, min, max, step, fmt }) {
+    return /* @__PURE__ */ React.createElement("label", { className: "block" }, /* @__PURE__ */ React.createElement("div", { className: "flex items-baseline justify-between gap-2" }, /* @__PURE__ */ React.createElement("span", { className: "text-[13px] text-slate-700" }, label), /* @__PURE__ */ React.createElement("span", { className: "text-[13px] tabular-nums font-medium text-slate-900" }, fmt ? fmt(value) : value)), /* @__PURE__ */ React.createElement(
+      "input",
+      {
+        type: "range",
+        min,
+        max,
+        step,
+        value,
+        onChange: (e) => set(parseFloat(e.target.value)),
+        className: "w-full mt-1 accent-slate-700 cursor-pointer"
+      }
+    ), hint && /* @__PURE__ */ React.createElement("div", { className: "text-[11px] text-slate-400 mt-0.5" }, hint));
+  }
+  function Toggle({ options, value, set }) {
+    return /* @__PURE__ */ React.createElement("div", { className: "inline-flex rounded-md border border-slate-200 p-0.5 bg-white" }, options.map((o) => /* @__PURE__ */ React.createElement(
+      "button",
+      {
+        key: o.v,
+        onClick: () => set(o.v),
+        className: "px-3 py-1 text-[12px] rounded transition-colors " + (value === o.v ? "bg-slate-800 text-white" : "text-slate-600 hover:text-slate-900")
+      },
+      o.label
+    )));
+  }
+  function GroupHeader({ children }) {
+    return /* @__PURE__ */ React.createElement("div", { className: "text-[12px] font-semibold text-slate-500 tracking-tight pt-1" }, children);
+  }
+  function App() {
+    const [extraPhD, setExtraPhD] = useState(1);
+    const [postdocYears, setPostdocYears] = useState(2);
+    const [stipend, setStipend] = useState(32e3);
+    const [postdocSalary, setPostdocSalary] = useState(58e3);
+    const [ttBase, setTtBase] = useState(92e3);
+    const [premium, setPremium] = useState(15e3);
+    const [phdPremium, setPhdPremium] = useState(8e3);
+    const [raise, setRaise] = useState(2);
+    const [tenureBump, setTenureBump] = useState(10);
+    const [tenureYear, setTenureYear] = useState(6);
+    const [inflation, setInflation] = useState(3);
+    const [match, setMatch] = useState(10);
+    const [retReturn, setRetReturn] = useState(6);
+    const [horizonMode, setHorizonMode] = useState("ten");
+    const [retYears, setRetYears] = useState(33);
+    const [dollars, setDollars] = useState("real");
+    const H = horizonMode === "ten" ? 10 : retYears;
+    const r = raise / 100, i = inflation / 100, ret = retReturn / 100;
+    const bump = tenureBump / 100, m = match / 100;
+    const model = useMemo(() => {
+      const bridges = {
+        straight: [],
+        postdoc: postdocYears > 0 ? [{ sal: postdocSalary, yrs: postdocYears, contrib: true }] : [],
+        // Path 3: stay in the PhD longer, then go straight to TT — no postdoc,
+        // so it earns the extra-PhD premium but not the postdoc placement premium.
+        phdOnly: extraPhD > 0 ? [{ sal: stipend, yrs: extraPhD, contrib: false }] : []
+      };
+      const yearlySalary = (bridge, ttStart, alt) => {
+        const bridgeLen = bridge.reduce((a, b) => a + b.yrs, 0);
+        const sal = [], contribFlag = [];
+        for (let t = 0; t < H; t++) {
+          if (t < bridgeLen) {
+            let acc = 0, chosen = bridge[0];
+            for (const st of bridge) {
+              if (t < acc + st.yrs) {
+                chosen = st;
+                break;
+              }
+              acc += st.yrs;
+            }
+            sal.push(chosen.sal);
+            contribFlag.push(chosen.contrib);
+          } else {
+            const k = t - bridgeLen;
+            const s = ttStart * Math.pow(1 + r, k) * (k >= tenureYear ? 1 + bump : 1);
+            sal.push(s);
+            contribFlag.push(true);
+          }
+        }
+        return { sal, contribFlag, bridgeLen };
+      };
+      const compute = (bridge, ttStart) => {
+        const tt = yearlySalary(bridge, ttStart, false);
+        let grossNom = 0, grossReal = 0, potNom = 0;
+        const cumReal = [], cumNom = [];
+        let aR = 0, aN = 0;
+        for (let t = 0; t < H; t++) {
+          const disc = Math.pow(1 + i, t);
+          const ttReal = tt.sal[t] / disc, ttNom = tt.sal[t];
+          grossNom += ttNom;
+          grossReal += ttReal;
+          if (tt.contribFlag[t]) potNom += m * ttNom * Math.pow(1 + ret, H - 1 - t);
+          aR += ttReal;
+          aN += ttNom;
+          cumReal.push({ t: t + 1, v: aR });
+          cumNom.push({ t: t + 1, v: aN });
+        }
+        const potReal = potNom / Math.pow(1 + i, H - 1);
+        return {
+          grossNom,
+          grossReal,
+          potNom,
+          potReal,
+          // evReal: eR, evNom: eN,
+          cumReal,
+          cumNom
+          // cumEVReal, cumEVNom,
+        };
+      };
+      const A2 = compute(bridges.straight, ttBase);
+      const B2 = compute(bridges.postdoc, ttBase + premium);
+      const D2 = compute(bridges.phdOnly, ttBase + phdPremium * extraPhD);
+      const grossOf = (o) => dollars === "real" ? o.grossReal : o.grossNom;
+      const b0 = compute(bridges.postdoc, ttBase + 0);
+      const b1 = compute(bridges.postdoc, ttBase + 1e3);
+      const slope = (grossOf(b1) - grossOf(b0)) / 1e3;
+      const breakEven2 = slope > 1e-9 ? (grossOf(A2) - grossOf(b0)) / slope : null;
+      return { A: A2, B: B2, D: D2, breakEven: breakEven2 };
+    }, [
+      extraPhD,
+      postdocYears,
+      stipend,
+      postdocSalary,
+      ttBase,
+      premium,
+      phdPremium,
+      raise,
+      tenureBump,
+      tenureYear,
+      inflation,
+      match,
+      retReturn,
+      H,
+      dollars,
+      r,
+      i,
+      ret,
+      bump,
+      m
+    ]);
+    const { A, B, D, breakEven } = model;
+    const pick = (o) => {
+      return dollars === "real" ? o.grossReal : o.grossNom;
+    };
+    const withRet = (o) => pick(o) + (dollars === "real" ? o.potReal : o.potNom);
+    const paths = [
+      { key: "straight", name: "Straight to TT", color: C.straight, o: A },
+      { key: "postdoc", name: `Postdoc (${postdocYears}y)`, color: C.postdoc, o: B },
+      { key: "phdOnly", name: `+${extraPhD}y PhD, no postdoc`, color: C.phdOnly, o: D }
+    ];
+    const seriesKey = dollars === "real" ? "cumReal" : "cumNom";
+    const chartData = [];
+    for (let t = 0; t < H; t++) {
+      chartData.push({
+        t: t + 1,
+        straight: A[seriesKey][t].v,
+        postdoc: B[seriesKey][t].v,
+        phdOnly: D[seriesKey][t].v
+      });
+    }
+    const scored = paths.map((p) => ({ ...p, val: pick(p.o) })).sort((a, b) => b.val - a.val);
+    const leader = scored[0], runner = scored[1];
+    const margin = leader.val - runner.val;
+    const dollarLabel = dollars === "real" ? "today's dollars" : "nominal dollars";
+    const horizonLabel = horizonMode === "ten" ? "over 10 years" : `over ${retYears} years`;
+    return /* @__PURE__ */ React.createElement("div", { style: { background: C.canvas }, className: "w-full text-slate-900" }, /* @__PURE__ */ React.createElement("div", { className: "max-w-6xl mx-auto px-5 py-7" }, /* @__PURE__ */ React.createElement("header", { className: "mb-6" }, /* @__PURE__ */ React.createElement("h1", { className: "text-[26px] leading-tight font-semibold text-slate-900" }, "The cost of the bridge"), /* @__PURE__ */ React.createElement("p", { className: "text-[14px] text-slate-500 mt-1 max-w-[70ch]" }, "How a postdoc \u2014 or an extra year of the PhD first \u2014 reshapes your earnings, once you account for the peak years a delay pushes off the end. Every figure is a placeholder. Move the sliders.")), /* @__PURE__ */ React.createElement("div", { className: "grid grid-cols-1 lg:grid-cols-[300px_1fr] gap-6" }, /* @__PURE__ */ React.createElement("aside", { className: "space-y-4" }, /* @__PURE__ */ React.createElement("div", { className: "rounded-lg border border-slate-200 bg-white p-4 space-y-4" }, /* @__PURE__ */ React.createElement("div", { className: "flex flex-wrap gap-2 items-center justify-between" }, /* @__PURE__ */ React.createElement("span", { className: "text-[12px] text-slate-500" }, "Horizon"), /* @__PURE__ */ React.createElement(
+      Toggle,
+      {
+        value: horizonMode,
+        set: setHorizonMode,
+        options: [{ v: "ten", label: "10 years" }, { v: "ret", label: "To retirement" }]
+      }
+    )), horizonMode === "ret" && /* @__PURE__ */ React.createElement(
+      Control,
+      {
+        label: "Years until retirement",
+        value: retYears,
+        set: setRetYears,
+        min: 15,
+        max: 40,
+        step: 1
+      }
+    ), /* @__PURE__ */ React.createElement("div", { className: "flex flex-wrap gap-2 items-center justify-between" }, /* @__PURE__ */ React.createElement("span", { className: "text-[12px] text-slate-500" }, "Dollars"), /* @__PURE__ */ React.createElement(
+      Toggle,
+      {
+        value: dollars,
+        set: setDollars,
+        options: [{ v: "real", label: "Real" }, { v: "nom", label: "Nominal" }]
+      }
+    ))), /* @__PURE__ */ React.createElement("div", { className: "rounded-lg border border-slate-200 bg-white p-4 space-y-3" }, /* @__PURE__ */ React.createElement(GroupHeader, null, "Timing"), /* @__PURE__ */ React.createElement(
+      Control,
+      {
+        label: "Extra PhD years (path 3)",
+        value: extraPhD,
+        set: setExtraPhD,
+        min: 0,
+        max: 3,
+        step: 1
+      }
+    ), /* @__PURE__ */ React.createElement(
+      Control,
+      {
+        label: "Postdoc years",
+        value: postdocYears,
+        set: setPostdocYears,
+        min: 0,
+        max: 4,
+        step: 1
+      }
+    ), /* @__PURE__ */ React.createElement(GroupHeader, null, "Salaries"), /* @__PURE__ */ React.createElement(
+      Control,
+      {
+        label: "Grad stipend",
+        value: stipend,
+        set: setStipend,
+        min: 2e4,
+        max: 5e4,
+        step: 1e3,
+        fmt: money
+      }
+    ), /* @__PURE__ */ React.createElement(
+      Control,
+      {
+        label: "Postdoc salary",
+        value: postdocSalary,
+        set: setPostdocSalary,
+        min: 4e4,
+        max: 85e3,
+        step: 1e3,
+        fmt: money
+      }
+    ), /* @__PURE__ */ React.createElement(
+      Control,
+      {
+        label: "TT base (straight out)",
+        value: ttBase,
+        set: setTtBase,
+        min: 7e4,
+        max: 16e4,
+        step: 1e3,
+        fmt: money,
+        hint: "9-month; summer money is separate"
+      }
+    ), /* @__PURE__ */ React.createElement(
+      Control,
+      {
+        label: "Postdoc placement premium",
+        value: premium,
+        set: setPremium,
+        min: 0,
+        max: 6e4,
+        step: 1e3,
+        fmt: money,
+        hint: "extra TT base a postdoc buys you"
+      }
+    ), /* @__PURE__ */ React.createElement(
+      Control,
+      {
+        label: "Extra PhD year premium",
+        value: phdPremium,
+        set: setPhdPremium,
+        min: 0,
+        max: 4e4,
+        step: 1e3,
+        fmt: money,
+        hint: "extra TT base per additional dissertation year (path 3)"
+      }
+    ), /* @__PURE__ */ React.createElement(GroupHeader, null, "Raises & inflation"), /* @__PURE__ */ React.createElement(
+      Control,
+      {
+        label: "Annual raise",
+        value: raise,
+        set: setRaise,
+        min: 0,
+        max: 5,
+        step: 0.5,
+        fmt: (v) => v + "%"
+      }
+    ), /* @__PURE__ */ React.createElement(
+      Control,
+      {
+        label: "Tenure bump",
+        value: tenureBump,
+        set: setTenureBump,
+        min: 0,
+        max: 20,
+        step: 1,
+        fmt: (v) => "+" + v + "%"
+      }
+    ), /* @__PURE__ */ React.createElement(
+      Control,
+      {
+        label: "Bump in TT year",
+        value: tenureYear,
+        set: setTenureYear,
+        min: 4,
+        max: 9,
+        step: 1
+      }
+    ), /* @__PURE__ */ React.createElement(
+      Control,
+      {
+        label: "Inflation",
+        value: inflation,
+        set: setInflation,
+        min: 0,
+        max: 6,
+        step: 0.5,
+        fmt: (v) => v + "%"
+      }
+    ), /* @__PURE__ */ React.createElement(GroupHeader, null, "Retirement (employer)"), /* @__PURE__ */ React.createElement(
+      Control,
+      {
+        label: "Employer contribution",
+        value: match,
+        set: setMatch,
+        min: 0,
+        max: 15,
+        step: 1,
+        fmt: (v) => v + "%"
+      }
+    ), /* @__PURE__ */ React.createElement(
+      Control,
+      {
+        label: "Pot growth rate",
+        value: retReturn,
+        set: setRetReturn,
+        min: 0,
+        max: 9,
+        step: 0.5,
+        fmt: (v) => v + "%"
+      }
+    ))), /* @__PURE__ */ React.createElement("main", { className: "space-y-5" }, /* @__PURE__ */ React.createElement(
+      "div",
+      {
+        className: "rounded-xl border bg-white p-5",
+        style: { borderColor: C.hair, boxShadow: "0 1px 2px rgba(0,0,0,.35)" }
+      },
+      /* @__PURE__ */ React.createElement("div", { className: "text-[12px] text-slate-500 mb-1" }, "If you land the job", " \xB7 ", horizonLabel, " \xB7 ", dollarLabel),
+      /* @__PURE__ */ React.createElement("div", { className: "text-[22px] leading-snug font-semibold" }, /* @__PURE__ */ React.createElement("span", { style: { color: leader.color } }, leader.name), " leads", margin < 1 ? " \u2014 it's a tie" : /* @__PURE__ */ React.createElement(React.Fragment, null, " by ", /* @__PURE__ */ React.createElement("span", { className: "tabular-nums" }, money(margin))), /* @__PURE__ */ React.createElement("span", { className: "text-slate-400 font-normal" }, " vs ", runner.name)),
+      /* @__PURE__ */ React.createElement("div", { className: "mt-3 pt-3 border-t border-slate-100 text-[14px] text-slate-600" }, breakEven == null ? "A postdoc can't pay for itself here \u2014 it adds no TT years in this window." : /* @__PURE__ */ React.createElement(React.Fragment, null, "Break-even: a postdoc pays for itself once its placement premium clears", " ", /* @__PURE__ */ React.createElement("span", { className: "font-semibold text-slate-900 tabular-nums" }, money(Math.max(0, breakEven))), ". You've set it to", " ", /* @__PURE__ */ React.createElement("span", { className: "font-semibold tabular-nums" }, money(premium)), premium >= breakEven ? " \u2014 above the line." : " \u2014 below the line."))
+    ), /* @__PURE__ */ React.createElement("div", { className: "rounded-lg border border-slate-200 bg-white p-4" }, /* @__PURE__ */ React.createElement("div", { className: "text-[13px] font-medium text-slate-700 mb-2" }, "Cumulative earnings (", dollarLabel, ")"), /* @__PURE__ */ React.createElement("div", { style: { width: "100%", height: 320 } }, /* @__PURE__ */ React.createElement(ResponsiveContainer, null, /* @__PURE__ */ React.createElement(LineChart, { data: chartData, margin: { top: 8, right: 12, left: 8, bottom: 4 } }, /* @__PURE__ */ React.createElement(CartesianGrid, { stroke: "#2f353b", vertical: false }), /* @__PURE__ */ React.createElement(
+      XAxis,
+      {
+        dataKey: "t",
+        tick: { fontSize: 11, fill: C.muted },
+        label: { value: "years from now", position: "insideBottom", offset: -2, fontSize: 11, fill: C.muted }
+      }
+    ), /* @__PURE__ */ React.createElement(
+      YAxis,
+      {
+        tick: { fontSize: 11, fill: C.muted },
+        tickFormatter: (v) => "$" + Math.round(v / 1e3) + "k",
+        width: 52
+      }
+    ), /* @__PURE__ */ React.createElement(
+      Tooltip,
+      {
+        formatter: (v, n) => [money(v), n],
+        labelFormatter: (l) => `year ${l}`,
+        contentStyle: { fontSize: 12, borderRadius: 8, background: "#212529", border: "1px solid " + C.hair },
+        labelStyle: { color: C.muted },
+        itemStyle: { color: C.ink }
+      }
+    ), /* @__PURE__ */ React.createElement(Legend, { wrapperStyle: { fontSize: 12 } }), horizonMode === "ret" && /* @__PURE__ */ React.createElement(
+      ReferenceLine,
+      {
+        x: 10,
+        stroke: "#4b535c",
+        strokeDasharray: "3 3",
+        label: { value: "10-yr mark", fontSize: 10, fill: C.muted, position: "top" }
+      }
+    ), /* @__PURE__ */ React.createElement(
+      Line,
+      {
+        type: "monotone",
+        dataKey: "straight",
+        name: "Straight to TT",
+        stroke: C.straight,
+        strokeWidth: 2.2,
+        dot: false
+      }
+    ), /* @__PURE__ */ React.createElement(
+      Line,
+      {
+        type: "monotone",
+        dataKey: "postdoc",
+        name: `Postdoc (${postdocYears}y)`,
+        stroke: C.postdoc,
+        strokeWidth: 2.2,
+        dot: false
+      }
+    ), /* @__PURE__ */ React.createElement(
+      Line,
+      {
+        type: "monotone",
+        dataKey: "phdOnly",
+        name: `+${extraPhD}y PhD, no postdoc`,
+        stroke: C.phdOnly,
+        strokeWidth: 2.2,
+        dot: false
+      }
+    ))))), /* @__PURE__ */ React.createElement("div", { className: "rounded-lg border border-slate-200 bg-white overflow-hidden" }, /* @__PURE__ */ React.createElement("table", { className: "w-full text-[13px]" }, /* @__PURE__ */ React.createElement("thead", null, /* @__PURE__ */ React.createElement("tr", { className: "text-slate-500 border-b border-slate-200 bg-slate-50/60" }, /* @__PURE__ */ React.createElement("th", { className: "text-left font-medium px-4 py-2.5" }, "Path"), /* @__PURE__ */ React.createElement("th", { className: "text-right font-medium px-4 py-2.5" }, "Gross earnings"), /* @__PURE__ */ React.createElement("th", { className: "text-right font-medium px-4 py-2.5" }, "+ employer retirement"), /* @__PURE__ */ React.createElement("th", { className: "text-right font-medium px-4 py-2.5" }, "vs leader"))), /* @__PURE__ */ React.createElement("tbody", null, paths.map((p) => {
+      const v = pick(p.o);
+      const diff = v - leader.val;
+      return /* @__PURE__ */ React.createElement("tr", { key: p.key, className: "border-b border-slate-100 last:border-0" }, /* @__PURE__ */ React.createElement("td", { className: "px-4 py-2.5" }, /* @__PURE__ */ React.createElement(
+        "span",
+        {
+          className: "inline-block w-2.5 h-2.5 rounded-sm mr-2 align-middle",
+          style: { background: p.color }
+        }
+      ), p.name), /* @__PURE__ */ React.createElement("td", { className: "px-4 py-2.5 text-right tabular-nums" }, money(v)), /* @__PURE__ */ React.createElement("td", { className: "px-4 py-2.5 text-right tabular-nums text-slate-500" }, money(withRet(p.o))), /* @__PURE__ */ React.createElement(
+        "td",
+        {
+          className: "px-4 py-2.5 text-right tabular-nums",
+          style: { color: diff === 0 ? C.ink : diff < 0 ? "#f87171" : "#4ade80" }
+        },
+        diff === 0 ? "\u2014" : (diff > 0 ? "+" : "") + money(diff)
+      ));
+    })))), /* @__PURE__ */ React.createElement("div", { className: "text-[13px] text-slate-600 leading-relaxed px-1" }, /* @__PURE__ */ React.createElement("p", null, "These are the numbers ", /* @__PURE__ */ React.createElement("em", null, "if the TT job lands"), ". Switch the horizon: the delayed paths tend to trail at 10 years (you're still on the bridge) and catch up \u2014 or overtake \u2014 by retirement, because a placement premium compounds over every remaining TT year while the stipend years it costs you are paid for only once. Path 3 buys that premium with dissertation time instead of a postdoc, on a stipend rather than a postdoc salary \u2014 so it is the cheaper delay only if an extra year of writing moves your placement about as much as a postdoc would.")))), /* @__PURE__ */ React.createElement("footer", { className: "text-[11px] text-slate-400 mt-8 max-w-[80ch]" }, "A planning sketch, not financial advice. It ignores taxes, cost-of-living and currency differences between institutions, non-salary benefits beyond the employer retirement contribution, and outside-offer raises \u2014 the last being the biggest real driver of academic pay growth.")));
+  }
+  const root = ReactDOM.createRoot(document.getElementById("root"));
+  root.render(React.createElement(App));
+})();
+    </script>
+  </body>
+</html>
