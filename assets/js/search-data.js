@@ -51,7 +51,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/assets/pdf/CV_AdamRoberts.pdf";
           },
-        },{id: "post-everything-i-read-in-april-2026",
+        },{id: "post-collider-bias-or-why-quot-controlling-for-more-quot-can-make-things-worse",
+        
+          title: "Collider bias, or why &quot;controlling for more&quot; can make things worse",
+        
+        description: "Conditioning on a variable that two other things both cause can conjure a correlation between them out of thin air. A live demo you can push around.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/2026/09/28/collider-bias.html";
+          
+        },
+      },{id: "post-everything-i-read-in-april-2026",
         
           title: "Everything I read in April 2026",
         
