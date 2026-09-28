@@ -1,5 +1,4 @@
 ---
-
 layout: post
 title: Collider bias, or why "controlling for more" can make things worse
 date: 2026-09-28
@@ -7,9 +6,9 @@ description: Conditioning on a variable that two other things both cause can cre
 tags: statistics causal-inference
 categories:
 mermaid:
-enabled: true
-zoomable: false
----------------
+  enabled: true
+  zoomable: false
+---
 
 "Add more controls" is pretty common advice when you're running a regression. If you're unsure whether a variable belongs in the model, why not just throw it in? The coefficient can sort itself out.
 
