@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
@@ -68,8 +68,7 @@
         margin: 0;
         background: var(--bg);
         color: var(--ink);
-        font-family:
-          -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
       }
       .wrap {
         padding: 14px 16px 20px;
@@ -246,9 +245,8 @@
       </div>
 
       <p class="hint">
-        Each dot is one unit. The two traits are drawn independently — the only thing that changes
-        is which units clear the bar. Drag the slider to make the cutoff stricter, or draw a fresh
-        sample.
+        Each dot is one unit. The two traits are drawn independently — the only thing that changes is which units clear the bar. Drag the slider to
+        make the cutoff stricter, or draw a fresh sample.
       </p>
     </div>
 
@@ -575,8 +573,7 @@
 
           document.getElementById("nSel").textContent = "n = " + selX.length;
           document.getElementById("rSel").textContent = fmt(rSel);
-          document.getElementById("warnSmall").textContent =
-            selX.length < 20 ? "small sample — noisy estimate" : "";
+          document.getElementById("warnSmall").textContent = selX.length < 20 ? "small sample — noisy estimate" : "";
 
           drawScatter(document.getElementById("cvSel"), selX, selY, {
             color: css("--accent"),

@@ -28,7 +28,7 @@ A confounder is a fork: it causes both of your variables, so it opens a path bet
 
 The intuition is "explaining away." Suppose getting cast just requires clearing a bar on talent-plus-looks — either quality can carry you. Once you already know someone got cast, learning that they're not especially talented is informative: it means their looks must have been doing the work. Being told the outcome and one cause changes what you believe about the other cause, even though the two causes never talked to each other. Restrict a sample to people above that bar, and you'll see it as a negative correlation between the two traits — an association that says nothing about either one causing the other, and that vanishes the moment you stop conditioning on who cleared the bar.
 
-This is what epidemiologists call **Berkson's paradox**: two diseases with no biological relationship can look negatively correlated in hospital records, purely because people get admitted when *either* one is severe enough. It's also why "successful founders" tend to look like skill and luck trade off, why journals full of published papers can make rigor and novelty look inversely related, and why, among people who date very attractive partners, personality tends to look worse the better the looks — not because attractive people date jerks, but because plenty of unattractive-but-lovely people never clear the bar to be in the sample at all.
+This is what epidemiologists call **Berkson's paradox**: two diseases with no biological relationship can look negatively correlated in hospital records, purely because people get admitted when _either_ one is severe enough. It's also why "successful founders" tend to look like skill and luck trade off, why journals full of published papers can make rigor and novelty look inversely related, and why, among people who date very attractive partners, personality tends to look worse the better the looks — not because attractive people date jerks, but because plenty of unattractive-but-lovely people never clear the bar to be in the sample at all.
 
 ## Try it
 
@@ -42,11 +42,11 @@ Below, two traits are simulated as statistically independent — genuinely, by c
   onload="this.style.height = (this.contentWindow.document.documentElement.scrollHeight + 20) + 'px'"
 ></iframe>
 
-The direction is not an accident of this particular simulation. Whenever a cutoff is a mix of two independent ingredients, being told someone cleared the cutoff *and* was weak on one ingredient tells you they must have been strong on the other. That's the whole mechanism — no measurement error, no confounding, no real effect of one trait on the other anywhere in sight.
+The direction is not an accident of this particular simulation. Whenever a cutoff is a mix of two independent ingredients, being told someone cleared the cutoff _and_ was weak on one ingredient tells you they must have been strong on the other. That's the whole mechanism — no measurement error, no confounding, no real effect of one trait on the other anywhere in sight.
 
 ## Where this bites in practice
 
-The dangerous version isn't a toy example — it's a variable that looks like an obviously good control because it's measured *after* treatment and *before* the outcome, so it looks like it belongs on the causal path. Classic cases:
+The dangerous version isn't a toy example — it's a variable that looks like an obviously good control because it's measured _after_ treatment and _before_ the outcome, so it looks like it belongs on the causal path. Classic cases:
 
 - **Selecting on a post-treatment variable.** Studying the effect of a drug on mortality, but only among patients who were discharged alive, conditions on a collider (discharge status is caused by both the drug and by underlying health) and can flip the estimated effect's sign.
 - **Controlling for a mediator's sibling.** If treatment affects two downstream outcomes that also affect each other only through a shared cause you haven't measured, conditioning on one to study the other can induce bias where none existed in the treatment effect itself.
