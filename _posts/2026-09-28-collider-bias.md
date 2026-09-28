@@ -1,18 +1,21 @@
 ---
+
 layout: post
 title: Collider bias, or why "controlling for more" can make things worse
 date: 2026-09-28
-description: Conditioning on a variable that two other things both cause can conjure a correlation between them out of thin air. A live demo you can push around.
+description: Conditioning on a variable that two other things both cause can create a correlation between them that wasn't there before. A live demo you can push around.
 tags: statistics causal-inference
 categories:
 mermaid:
-  enabled: true
-  zoomable: false
----
+enabled: true
+zoomable: false
+---------------
 
-"Add more controls" is usually treated as free advice: if you're not sure a variable belongs in the regression, throw it in and let the coefficient sort itself out. Most of the time that's harmless. Sometimes it's exactly backwards — adding the "right" variable can manufacture a relationship between two things that don't actually affect each other at all.
+"Add more controls" is pretty common advice when you're running a regression. If you're unsure whether a variable belongs in the model, why not just throw it in? The coefficient can sort itself out.
 
-The culprit is a **collider**: a variable that is a common _effect_ of two causes, rather than a common cause of two effects.
+The problem is that sometimes the extra control is exactly what causes the problem.
+
+A **collider** is a variable that is caused by two other variables. If you're interested in the relationship between those two causes, conditioning on the collider can create a relationship between them even when none existed to begin with.
 
 ```mermaid
 graph LR
@@ -20,19 +23,41 @@ graph LR
     Y((Looks)) --> Z
 ```
 
-Talent and looks are drawn here as unrelated — nothing in the diagram points from one to the other. But both point into "gets cast." That arrow structure is enough, on its own, to create a correlation between talent and looks the moment you restrict your view to people who got cast.
+Here, talent and looks are unrelated. There's no arrow between them, and in this example they really are independent. But they both affect whether someone gets cast.
+
+Now suppose we look only at people who got cast. Suddenly, talent and looks will tend to be negatively correlated.
+
+Why?
 
 ## Why conditioning on a collider does this
 
-A confounder is a fork: it causes both of your variables, so it opens a path between them, and you close that path by controlling for it. A collider is the opposite shape — a common effect sits at the end of two separate paths, and that structure keeps the paths closed **until you condition on the collider**, at which point you open one back up.
+It's easiest to see with a simple example. Imagine that getting cast depends on some combination of talent and looks. You don't need to be especially talented if you look great, and you don't need to be especially good-looking if you're extremely talented. You just need enough of the two combined to clear some threshold.
 
-The intuition is "explaining away." Suppose getting cast just requires clearing a bar on talent-plus-looks — either quality can carry you. Once you already know someone got cast, learning that they're not especially talented is informative: it means their looks must have been doing the work. Being told the outcome and one cause changes what you believe about the other cause, even though the two causes never talked to each other. Restrict a sample to people above that bar, and you'll see it as a negative correlation between the two traits — an association that says nothing about either one causing the other, and that vanishes the moment you stop conditioning on who cleared the bar.
+Now imagine that you meet someone who got cast and discover that they're not particularly talented. What would you infer about their looks?
 
-This is what epidemiologists call **Berkson's paradox**: two diseases with no biological relationship can look negatively correlated in hospital records, purely because people get admitted when _either_ one is severe enough. It's also why "successful founders" tend to look like skill and luck trade off, why journals full of published papers can make rigor and novelty look inversely related, and why, among people who date very attractive partners, personality tends to look worse the better the looks — not because attractive people date jerks, but because plenty of unattractive-but-lovely people never clear the bar to be in the sample at all.
+Probably that they must be pretty good-looking. Otherwise, how did they get past the casting threshold?
+
+The reverse works too. If you know someone got cast but isn't particularly good-looking, you'd expect them to be especially talented.
+
+That's the key idea. Once we condition on getting cast, information about one of the causes tells us something about the other cause. The two variables become negatively correlated even though they were completely unrelated in the population we started with.
+
+This is sometimes called **Berkson's paradox**. The classic example is hospital data: two diseases can be unrelated in the general population but negatively correlated among hospital patients if having either disease makes someone more likely to end up in the hospital.
+
+The same logic can show up in less obvious places. Among successful founders, for example, skill and luck might appear to trade off. In a sample of published papers, rigor and novelty might appear negatively related. And among people who date very attractive partners, you might find a relationship between attractiveness and personality that isn't present in the population as a whole.
+
+None of these patterns necessarily tells us that the two underlying traits actually cause each other. They can arise simply because we're looking at a selected group.
 
 ## Try it
 
-Below, two traits are simulated as statistically independent — genuinely, by construction, with a fresh normal random draw each time you click "new sample." The only thing the slider changes is how selective the cutoff for "making it" is. Watch the correlation in the full population stay near zero no matter what, while the correlation among the selected group drifts away from zero — and gets more extreme the more selective the cutoff.
+The simulation below makes the point pretty directly.
+
+Talent and looks are generated independently, so by construction there is no relationship between them. Every time you click "new sample," you get a fresh random draw.
+
+The slider controls how selective the casting process is. Move it around and compare the correlation in the full population with the correlation among people who got cast.
+
+The population correlation stays around zero. The correlation in the selected sample doesn't.
+
+And as the casting threshold gets more selective, the induced correlation becomes stronger.
 
 <iframe
   src="{{ '/assets/html/collider-bias-demo.html' | relative_url }}"
@@ -42,18 +67,34 @@ Below, two traits are simulated as statistically independent — genuinely, by c
   onload="this.style.height = (this.contentWindow.document.documentElement.scrollHeight + 20) + 'px'"
 ></iframe>
 
-The direction is not an accident of this particular simulation. Whenever a cutoff is a mix of two independent ingredients, being told someone cleared the cutoff _and_ was weak on one ingredient tells you they must have been strong on the other. That's the whole mechanism — no measurement error, no confounding, no real effect of one trait on the other anywhere in sight.
+There's nothing special about the particular simulation. The same thing happens whenever selection depends on two otherwise independent variables.
+
+If you know someone made it through the selection process and you also know they were weak on one of the ingredients, that tells you something about how strong they must have been on the other ingredient.
+
+You didn't discover a real relationship between the two variables. You created one by conditioning on selection.
 
 ## Where this bites in practice
 
-The dangerous version isn't a toy example — it's a variable that looks like an obviously good control because it's measured _after_ treatment and _before_ the outcome, so it looks like it belongs on the causal path. Classic cases:
+The more important cases aren't toy examples like casting actors. They show up when a variable looks like a perfectly reasonable thing to control for.
 
-- **Selecting on a post-treatment variable.** Studying the effect of a drug on mortality, but only among patients who were discharged alive, conditions on a collider (discharge status is caused by both the drug and by underlying health) and can flip the estimated effect's sign.
-- **Controlling for a mediator's sibling.** If treatment affects two downstream outcomes that also affect each other only through a shared cause you haven't measured, conditioning on one to study the other can induce bias where none existed in the treatment effect itself.
-- **Survey and sample-selection effects.** Studying what predicts civic participation using only survey respondents conditions on "responded to the survey" — a variable plausibly caused by both the predictor and the outcome you're studying.
+One common mistake is **conditioning on a post-treatment variable**. Suppose you want to estimate the effect of a drug on mortality, but you restrict the analysis to patients who were discharged from the hospital. Discharge status may depend both on the treatment and on a patient's underlying health. Conditioning on discharge can therefore introduce a relationship that wasn't there in the population you started with, potentially even changing the apparent direction of the treatment effect.
 
-The general rule from the causal-graph literature (Pearl; Elwert & Winship 2014, "Endogenous Selection Bias") is that you should not condition on a descendant of two variables whose relationship you care about, unless you also control for whatever induced the bias — and sometimes not even then. "It's measured, so control for it" is not a safe default; the graph, not the availability of the variable, has to decide what belongs in the model.
+Another possibility is **conditioning on one variable that is downstream of treatment when you're interested in another downstream outcome**. If treatment affects multiple things, controlling for one of them can change the comparison you're making in ways that aren't obvious from the regression table.
+
+There's also **sample selection**. Suppose you're studying what predicts civic participation using survey data. If the decision to respond to the survey depends both on your predictor and on civic participation, then looking only at respondents means you're conditioning on a variable that is itself caused by both sides of the relationship you're trying to study.
+
+These examples are different, but the underlying question is the same:
+
+**What causes the variable I'm conditioning on?**
+
+That's why "it's measured, so control for it" isn't a particularly good rule for causal analysis. Whether a variable belongs in the model depends on the causal structure, not just on whether you happen to have data on it.
 
 ## Takeaway
 
-More controls are not automatically more correct. Before adding a variable to a model — or restricting a sample on it — ask what causes it. If it's downstream of both the variable and the outcome you're relating, you may be looking at a collider, and conditioning on it can manufacture the very relationship you're trying to measure.
+Adding controls isn't automatically a way to make a model better.
+
+Before adding a variable to a regression — or restricting your sample based on it — think about what causes that variable. If it's a common effect of the variables whose relationship you're trying to estimate, conditioning on it can create a relationship that wasn't there in the first place.
+
+Sometimes the problem with a regression isn't that you didn't control for enough.
+
+It's that you controlled for the wrong thing.
