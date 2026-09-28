@@ -51,11 +51,11 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/assets/pdf/CV_AdamRoberts.pdf";
           },
-        },{id: "post-collider-bias",
+        },{id: "post-collider-bias-or-why-quot-controlling-for-more-quot-can-make-things-worse",
         
-          title: "Collider Bias",
+          title: "Collider bias, or why &quot;controlling for more&quot; can make things worse",
         
-        description: "",
+        description: "Conditioning on a variable that two other things both cause can create a correlation between them that wasn&#39;t there before. A live demo you can push around.",
         section: "Posts",
         handler: () => {
           
