@@ -37,6 +37,20 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/teaching/";
           },
+        },{id: "nav-datos",
+          title: "Datos",
+          description: "Conjuntos de datos producidos por Adam D. Roberts, incluyendo el Conjunto de Datos de Nacionalidades de la Comisión Europea (2011–2022).",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/es/data/";
+          },
+        },{id: "nav-data",
+          title: "Data",
+          description: "Datasets produced by Adam D. Roberts, including the European Commission Nationalities Dataset (2011–2022).",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/data/";
+          },
         },{id: "nav-cv",
           title: "CV",
           description: "",
