@@ -25,4 +25,4 @@ Undergraduate introduction to comparative politics — democratic and non-democr
 
 ### [Politics of Mexico](/courses/politics-of-mexico/)
 
-Survey of Mexican politics — the PRI regime, democratization, elections and parties, federalism, organized crime, corruption, and democratic erosion.
+
