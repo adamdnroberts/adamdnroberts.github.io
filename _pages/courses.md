@@ -20,3 +20,9 @@ Statistical inference and data analysis for political science, with R tutorials 
 ### [Introduction to Comparative Politics](/courses/intro-comparative-politics/)
 
 Undergraduate introduction to comparative politics — democratic and non-democratic systems, political institutions, electoral systems, and comparative method.
+
+---
+
+### [Politics of Mexico](/courses/politics-of-mexico/)
+
+Survey of Mexican politics — the PRI regime, democratization, elections and parties, federalism, organized crime, corruption, and democratic erosion.
