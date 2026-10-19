@@ -523,6 +523,11 @@ ninja.data = [{
           description: "Working directories, loading datasets, and data frame basics.",
           section: "Courses",handler: () => {
               window.location.href = "/courses/intro-quant-analysis/working-with-data/";
+            },},{id: "courses-politics-of-mexico",
+          title: 'Politics of Mexico',
+          description: "",
+          section: "Courses",handler: () => {
+              window.location.href = "/courses/politics-of-mexico/";
             },},{
         id: 'social-bluesky',
         title: 'Bluesky',
