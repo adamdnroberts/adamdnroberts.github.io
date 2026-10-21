@@ -17,27 +17,21 @@
  */
 
 const { useState, useMemo } = React;
-const {
-  LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip,
-  ResponsiveContainer, ReferenceLine, Legend,
-} = Recharts;
-
+const { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, ReferenceLine, Legend } = Recharts;
 
 // ---- palette (three well-separated data colors) ----
 const C = {
   straight: "#2dd4bf", // teal
-  postdoc: "#fbbf24",  // amber
-  phdOnly: "#fb7185",  // rose
+  postdoc: "#fbbf24", // amber
+  phdOnly: "#fb7185", // rose
   ink: "#f1f4f7",
   muted: "#98a1ab",
   hair: "#3b4148",
   canvas: "#1c1c1d",
 };
 
-const money = (x) =>
-  "$" + Math.round(x).toLocaleString("en-US");
-const moneyK = (x) =>
-  Math.abs(x) >= 1000 ? "$" + Math.round(x / 1000) + "k" : "$" + Math.round(x);
+const money = (x) => "$" + Math.round(x).toLocaleString("en-US");
+const moneyK = (x) => (Math.abs(x) >= 1000 ? "$" + Math.round(x / 1000) + "k" : "$" + Math.round(x));
 
 // A single labeled slider
 function Control({ label, hint, value, set, min, max, step, fmt }) {
@@ -45,13 +39,13 @@ function Control({ label, hint, value, set, min, max, step, fmt }) {
     <label className="block">
       <div className="flex items-baseline justify-between gap-2">
         <span className="text-[13px] text-slate-700">{label}</span>
-        <span className="text-[13px] tabular-nums font-medium text-slate-900">
-          {fmt ? fmt(value) : value}
-        </span>
+        <span className="text-[13px] tabular-nums font-medium text-slate-900">{fmt ? fmt(value) : value}</span>
       </div>
       <input
         type="range"
-        min={min} max={max} step={step}
+        min={min}
+        max={max}
+        step={step}
         value={value}
         onChange={(e) => set(parseFloat(e.target.value))}
         className="w-full mt-1 accent-slate-700 cursor-pointer"
@@ -69,10 +63,7 @@ function Toggle({ options, value, set }) {
           key={o.v}
           onClick={() => set(o.v)}
           className={
-            "px-3 py-1 text-[12px] rounded transition-colors " +
-            (value === o.v
-              ? "bg-slate-800 text-white"
-              : "text-slate-600 hover:text-slate-900")
+            "px-3 py-1 text-[12px] rounded transition-colors " + (value === o.v ? "bg-slate-800 text-white" : "text-slate-600 hover:text-slate-900")
           }
         >
           {o.label}
@@ -83,11 +74,7 @@ function Toggle({ options, value, set }) {
 }
 
 function GroupHeader({ children }) {
-  return (
-    <div className="text-[12px] font-semibold text-slate-500 tracking-tight pt-1">
-      {children}
-    </div>
-  );
+  return <div className="text-[12px] font-semibold text-slate-500 tracking-tight pt-1">{children}</div>;
 }
 
 function App() {
@@ -101,12 +88,12 @@ function App() {
   const [premium, setPremium] = useState(15000);
   const [phdPremium, setPhdPremium] = useState(8000);
   // raises & inflation
-  const [raise, setRaise] = useState(2);       // % annual nominal
+  const [raise, setRaise] = useState(2); // % annual nominal
   const [tenureBump, setTenureBump] = useState(10); // % at tenure
-  const [tenureYear, setTenureYear] = useState(6);  // TT-year index of bump
+  const [tenureYear, setTenureYear] = useState(6); // TT-year index of bump
   const [inflation, setInflation] = useState(3);
   // retirement
-  const [match, setMatch] = useState(10);      // % employer contribution
+  const [match, setMatch] = useState(10); // % employer contribution
   const [retReturn, setRetReturn] = useState(6); // % nominal growth of pot
   // odds & fallback — only the expected-value view used these (disabled below)
   // const [pStraight, setPStraight] = useState(35);
@@ -120,8 +107,11 @@ function App() {
   // const [view, setView] = useState("land"); // land | ev
 
   const H = horizonMode === "ten" ? 10 : retYears;
-  const r = raise / 100, i = inflation / 100, ret = retReturn / 100;
-  const bump = tenureBump / 100, m = match / 100;
+  const r = raise / 100,
+    i = inflation / 100,
+    ret = retReturn / 100;
+  const bump = tenureBump / 100,
+    m = match / 100;
 
   const model = useMemo(() => {
     // bridge = ordered [{sal, yrs}] before TT
@@ -136,12 +126,20 @@ function App() {
     // yearly nominal salary + whether it earns a retirement match, for a path
     const yearlySalary = (bridge, ttStart, alt) => {
       const bridgeLen = bridge.reduce((a, b) => a + b.yrs, 0);
-      const sal = [], contribFlag = [];
+      const sal = [],
+        contribFlag = [];
       for (let t = 0; t < H; t++) {
         if (t < bridgeLen) {
           // find bridge stage
-          let acc = 0, chosen = bridge[0];
-          for (const st of bridge) { if (t < acc + st.yrs) { chosen = st; break; } acc += st.yrs; }
+          let acc = 0,
+            chosen = bridge[0];
+          for (const st of bridge) {
+            if (t < acc + st.yrs) {
+              chosen = st;
+              break;
+            }
+            acc += st.yrs;
+          }
           sal.push(chosen.sal);
           contribFlag.push(chosen.contrib);
         } else {
@@ -151,7 +149,7 @@ function App() {
           //   sal.push(altBase * Math.pow(1 + altRaise / 100, k));
           //   contribFlag.push(true);
           // } else {
-          const s = ttStart * Math.pow(1 + r, k) * (k >= tenureYear ? (1 + bump) : 1);
+          const s = ttStart * Math.pow(1 + r, k) * (k >= tenureYear ? 1 + bump : 1);
           sal.push(s);
           contribFlag.push(true);
           // }
@@ -163,18 +161,25 @@ function App() {
     const compute = (bridge, ttStart /*, p */) => {
       const tt = yearlySalary(bridge, ttStart, false);
       // const alt = yearlySalary(bridge, ttStart, true);
-      let grossNom = 0, grossReal = 0, potNom = 0;
-      const cumReal = [], cumNom = [];
+      let grossNom = 0,
+        grossReal = 0,
+        potNom = 0;
+      const cumReal = [],
+        cumNom = [];
       // const cumEVReal = [], cumEVNom = [];
-      let aR = 0, aN = 0;
+      let aR = 0,
+        aN = 0;
       // let eR = 0, eN = 0;
       for (let t = 0; t < H; t++) {
         const disc = Math.pow(1 + i, t);
-        const ttReal = tt.sal[t] / disc, ttNom = tt.sal[t];
+        const ttReal = tt.sal[t] / disc,
+          ttNom = tt.sal[t];
         // const altReal = alt.sal[t] / disc, altNom = alt.sal[t];
-        grossNom += ttNom; grossReal += ttReal;
+        grossNom += ttNom;
+        grossReal += ttReal;
         if (tt.contribFlag[t]) potNom += m * ttNom * Math.pow(1 + ret, H - 1 - t);
-        aR += ttReal; aN += ttNom;
+        aR += ttReal;
+        aN += ttNom;
         // eR += p * ttReal + (1 - p) * altReal;
         // eN += p * ttNom + (1 - p) * altNom;
         cumReal.push({ t: t + 1, v: aR });
@@ -184,9 +189,13 @@ function App() {
       }
       const potReal = potNom / Math.pow(1 + i, H - 1);
       return {
-        grossNom, grossReal, potNom, potReal,
+        grossNom,
+        grossReal,
+        potNom,
+        potReal,
         // evReal: eR, evNom: eN,
-        cumReal, cumNom,
+        cumReal,
+        cumNom,
         // cumEVReal, cumEVNom,
       };
     };
@@ -204,9 +213,26 @@ function App() {
 
     return { A, B, D, breakEven };
   }, [
-    extraPhD, postdocYears, stipend, postdocSalary, ttBase, premium, phdPremium,
-    raise, tenureBump, tenureYear, inflation, match, retReturn,
-    H, dollars, r, i, ret, bump, m,
+    extraPhD,
+    postdocYears,
+    stipend,
+    postdocSalary,
+    ttBase,
+    premium,
+    phdPremium,
+    raise,
+    tenureBump,
+    tenureYear,
+    inflation,
+    match,
+    retReturn,
+    H,
+    dollars,
+    r,
+    i,
+    ret,
+    bump,
+    m,
   ]);
 
   const { A, B, D, breakEven } = model;
@@ -237,7 +263,8 @@ function App() {
 
   // leader for hero
   const scored = paths.map((p) => ({ ...p, val: pick(p.o) })).sort((a, b) => b.val - a.val);
-  const leader = scored[0], runner = scored[1];
+  const leader = scored[0],
+    runner = scored[1];
   const margin = leader.val - runner.val;
 
   const dollarLabel = dollars === "real" ? "today's dollars" : "nominal dollars";
@@ -248,12 +275,9 @@ function App() {
       <div className="max-w-6xl mx-auto px-5 py-7">
         {/* header */}
         <header className="mb-6">
-          <h1 className="text-[26px] leading-tight font-semibold text-slate-900">
-            The cost of the bridge
-          </h1>
+          <h1 className="text-[26px] leading-tight font-semibold text-slate-900">The cost of the bridge</h1>
           <p className="text-[14px] text-slate-500 mt-1 max-w-[70ch]">
-            How a postdoc — or an extra year of the PhD first — reshapes your
-            earnings, once you account for the peak years a delay pushes off the
+            How a postdoc — or an extra year of the PhD first — reshapes your earnings, once you account for the peak years a delay pushes off the
             end. Every figure is a placeholder. Move the sliders.
           </p>
         </header>
@@ -265,19 +289,24 @@ function App() {
               <div className="flex flex-wrap gap-2 items-center justify-between">
                 <span className="text-[12px] text-slate-500">Horizon</span>
                 <Toggle
-                  value={horizonMode} set={setHorizonMode}
-                  options={[{ v: "ten", label: "10 years" }, { v: "ret", label: "To retirement" }]}
+                  value={horizonMode}
+                  set={setHorizonMode}
+                  options={[
+                    { v: "ten", label: "10 years" },
+                    { v: "ret", label: "To retirement" },
+                  ]}
                 />
               </div>
-              {horizonMode === "ret" && (
-                <Control label="Years until retirement" value={retYears} set={setRetYears}
-                  min={15} max={40} step={1} />
-              )}
+              {horizonMode === "ret" && <Control label="Years until retirement" value={retYears} set={setRetYears} min={15} max={40} step={1} />}
               <div className="flex flex-wrap gap-2 items-center justify-between">
                 <span className="text-[12px] text-slate-500">Dollars</span>
                 <Toggle
-                  value={dollars} set={setDollars}
-                  options={[{ v: "real", label: "Real" }, { v: "nom", label: "Nominal" }]}
+                  value={dollars}
+                  set={setDollars}
+                  options={[
+                    { v: "real", label: "Real" },
+                    { v: "nom", label: "Nominal" },
+                  ]}
                 />
               </div>
               {/* Expected-value view, disabled for now:
@@ -293,41 +322,52 @@ function App() {
 
             <div className="rounded-lg border border-slate-200 bg-white p-4 space-y-3">
               <GroupHeader>Timing</GroupHeader>
-              <Control label="Extra PhD years (path 3)" value={extraPhD} set={setExtraPhD}
-                min={0} max={3} step={1} />
-              <Control label="Postdoc years" value={postdocYears} set={setPostdocYears}
-                min={0} max={4} step={1} />
+              <Control label="Extra PhD years (path 3)" value={extraPhD} set={setExtraPhD} min={0} max={3} step={1} />
+              <Control label="Postdoc years" value={postdocYears} set={setPostdocYears} min={0} max={4} step={1} />
 
               <GroupHeader>Salaries</GroupHeader>
-              <Control label="Grad stipend" value={stipend} set={setStipend}
-                min={20000} max={50000} step={1000} fmt={money} />
-              <Control label="Postdoc salary" value={postdocSalary} set={setPostdocSalary}
-                min={40000} max={85000} step={1000} fmt={money} />
-              <Control label="TT base (straight out)" value={ttBase} set={setTtBase}
-                min={70000} max={160000} step={1000} fmt={money}
-                hint="9-month; summer money is separate" />
-              <Control label="Postdoc placement premium" value={premium} set={setPremium}
-                min={0} max={60000} step={1000} fmt={money}
-                hint="extra TT base a postdoc buys you" />
-              <Control label="Extra PhD year premium" value={phdPremium} set={setPhdPremium}
-                min={0} max={40000} step={1000} fmt={money}
-                hint="extra TT base per additional dissertation year (path 3)" />
+              <Control label="Grad stipend" value={stipend} set={setStipend} min={20000} max={50000} step={1000} fmt={money} />
+              <Control label="Postdoc salary" value={postdocSalary} set={setPostdocSalary} min={40000} max={85000} step={1000} fmt={money} />
+              <Control
+                label="TT base (straight out)"
+                value={ttBase}
+                set={setTtBase}
+                min={70000}
+                max={160000}
+                step={1000}
+                fmt={money}
+                hint="9-month; summer money is separate"
+              />
+              <Control
+                label="Postdoc placement premium"
+                value={premium}
+                set={setPremium}
+                min={0}
+                max={60000}
+                step={1000}
+                fmt={money}
+                hint="extra TT base a postdoc buys you"
+              />
+              <Control
+                label="Extra PhD year premium"
+                value={phdPremium}
+                set={setPhdPremium}
+                min={0}
+                max={40000}
+                step={1000}
+                fmt={money}
+                hint="extra TT base per additional dissertation year (path 3)"
+              />
 
               <GroupHeader>Raises &amp; inflation</GroupHeader>
-              <Control label="Annual raise" value={raise} set={setRaise}
-                min={0} max={5} step={0.5} fmt={(v) => v + "%"} />
-              <Control label="Tenure bump" value={tenureBump} set={setTenureBump}
-                min={0} max={20} step={1} fmt={(v) => "+" + v + "%"} />
-              <Control label="Bump in TT year" value={tenureYear} set={setTenureYear}
-                min={4} max={9} step={1} />
-              <Control label="Inflation" value={inflation} set={setInflation}
-                min={0} max={6} step={0.5} fmt={(v) => v + "%"} />
+              <Control label="Annual raise" value={raise} set={setRaise} min={0} max={5} step={0.5} fmt={(v) => v + "%"} />
+              <Control label="Tenure bump" value={tenureBump} set={setTenureBump} min={0} max={20} step={1} fmt={(v) => "+" + v + "%"} />
+              <Control label="Bump in TT year" value={tenureYear} set={setTenureYear} min={4} max={9} step={1} />
+              <Control label="Inflation" value={inflation} set={setInflation} min={0} max={6} step={0.5} fmt={(v) => v + "%"} />
 
               <GroupHeader>Retirement (employer)</GroupHeader>
-              <Control label="Employer contribution" value={match} set={setMatch}
-                min={0} max={15} step={1} fmt={(v) => v + "%"} />
-              <Control label="Pot growth rate" value={retReturn} set={setRetReturn}
-                min={0} max={9} step={0.5} fmt={(v) => v + "%"} />
+              <Control label="Employer contribution" value={match} set={setMatch} min={0} max={15} step={1} fmt={(v) => v + "%"} />
+              <Control label="Pot growth rate" value={retReturn} set={setRetReturn} min={0} max={9} step={0.5} fmt={(v) => v + "%"} />
 
               {/* Inputs for the expected-value view, disabled for now:
               <GroupHeader>Odds &amp; fallback</GroupHeader>
@@ -346,17 +386,19 @@ function App() {
           {/* RESULTS */}
           <main className="space-y-5">
             {/* hero verdict */}
-            <div
-              className="rounded-xl border bg-white p-5"
-              style={{ borderColor: C.hair, boxShadow: "0 1px 2px rgba(0,0,0,.35)" }}
-            >
+            <div className="rounded-xl border bg-white p-5" style={{ borderColor: C.hair, boxShadow: "0 1px 2px rgba(0,0,0,.35)" }}>
               <div className="text-[12px] text-slate-500 mb-1">
                 {"If you land the job"} · {horizonLabel} · {dollarLabel}
               </div>
               <div className="text-[22px] leading-snug font-semibold">
                 <span style={{ color: leader.color }}>{leader.name}</span> leads
-                {margin < 1 ? " — it's a tie" : (
-                  <> by <span className="tabular-nums">{money(margin)}</span></>
+                {margin < 1 ? (
+                  " — it's a tie"
+                ) : (
+                  <>
+                    {" "}
+                    by <span className="tabular-nums">{money(margin)}</span>
+                  </>
                 )}
                 <span className="text-slate-400 font-normal"> vs {runner.name}</span>
               </div>
@@ -365,12 +407,8 @@ function App() {
                   "A postdoc can't pay for itself here — it adds no TT years in this window."
                 ) : (
                   <>
-                    Break-even: a postdoc pays for itself once its placement
-                    premium clears{" "}
-                    <span className="font-semibold text-slate-900 tabular-nums">
-                      {money(Math.max(0, breakEven))}
-                    </span>
-                    . You've set it to{" "}
+                    Break-even: a postdoc pays for itself once its placement premium clears{" "}
+                    <span className="font-semibold text-slate-900 tabular-nums">{money(Math.max(0, breakEven))}</span>. You've set it to{" "}
                     <span className="font-semibold tabular-nums">{money(premium)}</span>
                     {premium >= breakEven ? " — above the line." : " — below the line."}
                   </>
@@ -380,22 +418,17 @@ function App() {
 
             {/* chart */}
             <div className="rounded-lg border border-slate-200 bg-white p-4">
-              <div className="text-[13px] font-medium text-slate-700 mb-2">
-                Cumulative earnings ({dollarLabel})
-              </div>
+              <div className="text-[13px] font-medium text-slate-700 mb-2">Cumulative earnings ({dollarLabel})</div>
               <div style={{ width: "100%", height: 320 }}>
                 <ResponsiveContainer>
                   <LineChart data={chartData} margin={{ top: 8, right: 12, left: 8, bottom: 4 }}>
                     <CartesianGrid stroke="#2f353b" vertical={false} />
                     <XAxis
-                      dataKey="t" tick={{ fontSize: 11, fill: C.muted }}
+                      dataKey="t"
+                      tick={{ fontSize: 11, fill: C.muted }}
                       label={{ value: "years from now", position: "insideBottom", offset: -2, fontSize: 11, fill: C.muted }}
                     />
-                    <YAxis
-                      tick={{ fontSize: 11, fill: C.muted }}
-                      tickFormatter={(v) => "$" + Math.round(v / 1000) + "k"}
-                      width={52}
-                    />
+                    <YAxis tick={{ fontSize: 11, fill: C.muted }} tickFormatter={(v) => "$" + Math.round(v / 1000) + "k"} width={52} />
                     <Tooltip
                       formatter={(v, n) => [money(v), n]}
                       labelFormatter={(l) => `year ${l}`}
@@ -405,15 +438,16 @@ function App() {
                     />
                     <Legend wrapperStyle={{ fontSize: 12 }} />
                     {horizonMode === "ret" && (
-                      <ReferenceLine x={10} stroke="#4b535c" strokeDasharray="3 3"
-                        label={{ value: "10-yr mark", fontSize: 10, fill: C.muted, position: "top" }} />
+                      <ReferenceLine
+                        x={10}
+                        stroke="#4b535c"
+                        strokeDasharray="3 3"
+                        label={{ value: "10-yr mark", fontSize: 10, fill: C.muted, position: "top" }}
+                      />
                     )}
-                    <Line type="monotone" dataKey="straight" name="Straight to TT"
-                      stroke={C.straight} strokeWidth={2.2} dot={false} />
-                    <Line type="monotone" dataKey="postdoc" name={`Postdoc (${postdocYears}y)`}
-                      stroke={C.postdoc} strokeWidth={2.2} dot={false} />
-                    <Line type="monotone" dataKey="phdOnly" name={`+${extraPhD}y PhD, no postdoc`}
-                      stroke={C.phdOnly} strokeWidth={2.2} dot={false} />
+                    <Line type="monotone" dataKey="straight" name="Straight to TT" stroke={C.straight} strokeWidth={2.2} dot={false} />
+                    <Line type="monotone" dataKey="postdoc" name={`Postdoc (${postdocYears}y)`} stroke={C.postdoc} strokeWidth={2.2} dot={false} />
+                    <Line type="monotone" dataKey="phdOnly" name={`+${extraPhD}y PhD, no postdoc`} stroke={C.phdOnly} strokeWidth={2.2} dot={false} />
                   </LineChart>
                 </ResponsiveContainer>
               </div>
@@ -437,16 +471,12 @@ function App() {
                     return (
                       <tr key={p.key} className="border-b border-slate-100 last:border-0">
                         <td className="px-4 py-2.5">
-                          <span className="inline-block w-2.5 h-2.5 rounded-sm mr-2 align-middle"
-                            style={{ background: p.color }} />
+                          <span className="inline-block w-2.5 h-2.5 rounded-sm mr-2 align-middle" style={{ background: p.color }} />
                           {p.name}
                         </td>
                         <td className="px-4 py-2.5 text-right tabular-nums">{money(v)}</td>
-                        <td className="px-4 py-2.5 text-right tabular-nums text-slate-500">
-                          {money(withRet(p.o))}
-                        </td>
-                        <td className="px-4 py-2.5 text-right tabular-nums"
-                          style={{ color: diff === 0 ? C.ink : diff < 0 ? "#f87171" : "#4ade80" }}>
+                        <td className="px-4 py-2.5 text-right tabular-nums text-slate-500">{money(withRet(p.o))}</td>
+                        <td className="px-4 py-2.5 text-right tabular-nums" style={{ color: diff === 0 ? C.ink : diff < 0 ? "#f87171" : "#4ade80" }}>
                           {diff === 0 ? "—" : (diff > 0 ? "+" : "") + money(diff)}
                         </td>
                       </tr>
@@ -459,15 +489,11 @@ function App() {
             {/* reading */}
             <div className="text-[13px] text-slate-600 leading-relaxed px-1">
               <p>
-                These are the numbers <em>if the TT job lands</em>. Switch the
-                horizon: the delayed paths tend to trail at 10 years (you're
-                still on the bridge) and catch up — or overtake — by retirement,
-                because a placement premium compounds over every remaining TT
-                year while the stipend years it costs you are paid for only
-                once. Path 3 buys that premium with dissertation time instead
-                of a postdoc, on a stipend rather than a postdoc salary — so it
-                is the cheaper delay only if an extra year of writing moves your
-                placement about as much as a postdoc would.
+                These are the numbers <em>if the TT job lands</em>. Switch the horizon: the delayed paths tend to trail at 10 years (you're still on
+                the bridge) and catch up — or overtake — by retirement, because a placement premium compounds over every remaining TT year while the
+                stipend years it costs you are paid for only once. Path 3 buys that premium with dissertation time instead of a postdoc, on a stipend
+                rather than a postdoc salary — so it is the cheaper delay only if an extra year of writing moves your placement about as much as a
+                postdoc would.
               </p>
               {/* Expected-value view, disabled for now:
                 <p>
@@ -483,16 +509,13 @@ function App() {
         </div>
 
         <footer className="text-[11px] text-slate-400 mt-8 max-w-[80ch]">
-          A planning sketch, not financial advice. It ignores taxes, cost-of-living
-          and currency differences between institutions, non-salary benefits beyond
-          the employer retirement contribution, and outside-offer raises — the last
-          being the biggest real driver of academic pay growth.
+          A planning sketch, not financial advice. It ignores taxes, cost-of-living and currency differences between institutions, non-salary benefits
+          beyond the employer retirement contribution, and outside-offer raises — the last being the biggest real driver of academic pay growth.
         </footer>
       </div>
     </div>
   );
 }
-
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(React.createElement(App));
