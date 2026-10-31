@@ -30,7 +30,7 @@ lang_ref: research
    </details>
 
 ### Working Papers
-1. "Overcoming Uncertainty: How Voters Learn about Opposition Parties Under Competitive Authoritarian Systems" *Under Review.* <a href="https://doi.org/10.31235/osf.io/2zjmt_v2" target="_blank" rel="noopener noreferrer">[Paper]</a>
+1. "Overcoming Uncertainty: How Voters Learn about Opposition Parties Under Competitive Authoritarian Systems" *R&R, Comparative Political Studies.* <a href="https://doi.org/10.31235/osf.io/2zjmt_v2" target="_blank" rel="noopener noreferrer">[Paper]</a>
    <details>
      <summary><strong>Abstract</strong></summary>
      <p>

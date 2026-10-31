@@ -31,7 +31,7 @@ lang_ref: research
 
 
 ### Artículos en Proceso de Revisión
-1. "Overcoming Uncertainty: How Voters Learn about Opposition Parties Under Competitive Authoritarian Systems" *(Superar la incertidumbre: cómo los votantes aprenden sobre los partidos de oposición en sistemas autoritarios competitivos)* *En revisión.* <a href="https://doi.org/10.31235/osf.io/2zjmt_v2" target="_blank" rel="noopener noreferrer">[Artículo]</a>
+1. "Overcoming Uncertainty: How Voters Learn about Opposition Parties Under Competitive Authoritarian Systems" *(Superar la incertidumbre: cómo los votantes aprenden sobre los partidos de oposición en sistemas autoritarios competitivos)* *R&R, Comparative Political Studies.* <a href="https://doi.org/10.31235/osf.io/2zjmt_v2" target="_blank" rel="noopener noreferrer">[Artículo]</a>
    <details>
      <summary><strong>Resumen</strong></summary>
      <p>
