@@ -9,19 +9,10 @@ nav_order: 1
 lang: en
 lang_ref: research
 ---
-
-### Job Market Paper
-1. "Which Comparison Counts? Information, Benchmarking, and Electoral Accountability" <a href="/assets/pdf/JMP_AdamRoberts.pdf" target="_blank" rel="noopener noreferrer">[Paper]</a>
-   <details>
-     <summary><strong>Abstract</strong></summary>
-     <p>
-       Field experiments have mixed findings on how and to what extent information changes voting behavior. Many factors may explain these mixed results, but one that remains under-explored is how benchmarking, or the presentation of performance information relative to other governments, can change interpretation. In a pre-registered survey fielded in Mexico with both descriptive and experimental components, I examine respondents' preferences for benchmarked information. I find that respondents prefer benchmark municipalities that are geographically proximate, in the same state, larger than their own, and governed by the same party coalition as their own municipality. When randomly assigned to treatment conditions that present robbery statistics for their municipality and vary whether partisan benchmarks are shown, I find that only same-coalition comparisons change respondents' intentions to vote for an incumbent, consistent with the theoretical case in which voters evaluate politicians based on competence. Beliefs about the incumbent's handling of crime shift in the same direction.
-     </p>
-   </details>
    
 ### Peer-reviewed Publications
 
-1. "Geographic Representation and Information Capacity in the European Commission" *European Union Politics.* <a href="https://doi.org/10.1177/14651165261494189" target="_blank" rel="noopener noreferrer">[Paper]</a> <a href="https://doi.org/10.31235/osf.io/8vgu6_v4" target="_blank" rel="noopener noreferrer">[Pre-print]</a>
+1. <a href="https://doi.org/10.1177/14651165261494189" target="_blank" rel="noopener noreferrer">"Geographic Representation and Information Capacity in the European Commission"</a> *European Union Politics.* <a href="https://doi.org/10.31235/osf.io/8vgu6_v4" target="_blank" rel="noopener noreferrer">[Pre-print]</a>
    <details>
      <summary><strong>Abstract</strong></summary>
      <p>
@@ -30,7 +21,8 @@ lang_ref: research
    </details>
 
 ### Working Papers
-1. "Overcoming Uncertainty: How Voters Learn about Opposition Parties Under Competitive Authoritarian Systems" *R&R, Comparative Political Studies.* <a href="https://doi.org/10.31235/osf.io/2zjmt_v2" target="_blank" rel="noopener noreferrer">[Paper]</a>
+1. "Overcoming Uncertainty: How Voters Learn about Opposition Parties Under Competitive Authoritarian Systems" <a href="https://doi.org/10.31235/osf.io/2zjmt_v2" target="_blank" rel="noopener noreferrer">[Working Paper]</a>
+- *R&R, Comparative Political Studies.*
    <details>
      <summary><strong>Abstract</strong></summary>
      <p>
@@ -38,7 +30,14 @@ lang_ref: research
      </p>
    </details>
    
-
+2. "Which Comparison Counts? Crime, Benchmarking, and Electoral Accountability" <a href="/assets/pdf/JMP_AdamRoberts.pdf" target="_blank" rel="noopener noreferrer">[Working Paper]</a>
+   <details>
+     <summary><strong>Abstract</strong></summary>
+     <p>
+       Do voters punish incumbent politicians for mishandling crime? Voters in Latin America rank crime among their top concerns, yet compared to other issues, less attention has been paid to whether they hold politicians accountable for it. Informational experiments offer one way to answer this question, but their findings on whether information changes voting behavior are mixed. I argue that one under-explored reason is benchmarking: how voters respond to performance information depends on the governments it is compared against. In a pre-registered survey experiment in Mexico, respondents receive municipal robbery statistics alongside differing benchmarks. Unfavorable information lowers support for the incumbent most when benchmarked against municipalities governed by the same coalition, the comparison that best isolates the incumbent's competence from partisan factors. These results suggest that voters are willing to hold incumbents accountable for crime and highlight the importance of benchmarks in informational experiments.
+     </p>
+   </details>
+   
 ### Works in Progress
 
 1. “When the Nomads Arrive: Foreign Remote Workers and Electoral Backlash in Latin America”
