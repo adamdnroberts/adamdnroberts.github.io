@@ -21,7 +21,7 @@ lang_ref: research
    </details>
 
 ### Working Papers
-1. "Overcoming Uncertainty: How Voters Learn about Opposition Parties Under Competitive Authoritarian Systems" <a href="https://doi.org/10.31235/osf.io/2zjmt_v2" target="_blank" rel="noopener noreferrer">[Working Paper]</a>
+1. "Overcoming Uncertainty: How Voters Learn about Opposition Parties Under Competitive Authoritarian Systems" <a href="https://doi.org/10.31235/osf.io/2zjmt_v2" target="_blank" rel="noopener noreferrer">[Draft]</a>
 - *R&R, Comparative Political Studies.*
    <details>
      <summary><strong>Abstract</strong></summary>
@@ -30,7 +30,7 @@ lang_ref: research
      </p>
    </details>
    
-2. "Which Comparison Counts? Crime, Benchmarking, and Electoral Accountability" <a href="/assets/pdf/JMP_AdamRoberts.pdf" target="_blank" rel="noopener noreferrer">[Working Paper]</a>
+2. "Which Comparison Counts? Crime, Benchmarking, and Electoral Accountability" <a href="/assets/pdf/JMP_AdamRoberts.pdf" target="_blank" rel="noopener noreferrer">[Draft]</a>
    <details>
      <summary><strong>Abstract</strong></summary>
      <p>
